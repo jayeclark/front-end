@@ -1,0 +1,310 @@
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 400 600;
+    src: url("nf-NetflixSansRegular.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 1 200;
+    src: url("nf-NetflixSansThin.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 200 399;
+    src: url("nf-NetflixSansLight.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 600 700;
+    src: url("nf-NetflixSansMedium.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 700 800;
+    src: url("nf-NetflixSansBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 800 1000;
+    src: url("nf-NetflixSansBlack.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Netflix Sans Icon';
+    src: url("nf-NetflixSansIcon.woff") format("woff");
+}
+
+body {
+    background-color: black;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    color: white;
+    margin: 0px;
+}
+
+h1 {
+    font-size: 3.125rem;
+    font-weight: bold;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+h3 {
+    font-size: 1.85rem;
+    font-weight: 400;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+h5 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.hero-section {
+    grid-area: 1 / 1 / span 1 / span 1;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0) 60%, rgba(0,0,0,0.8)),
+                      url("../assets/nf-IT-en-20210823-popsignuptwoweeks-perspective_alpha_website_large.jpeg");
+    background-size: cover;
+}
+
+.rows-section {
+    grid-area: 2 / 1 / span 1 / span 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-section {
+    grid-area: 3 / 1 / span 1 / span 1;
+}
+.footer-section {
+    grid-area: 4 / 1 / span 1 / span 1;
+}
+
+.hero {
+    display: block;
+    height: auto;
+}
+
+.hero-content-wrapper {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.hero-ribbon-area,
+.hero-slogan-area,
+.hero-form-area {
+    display: block;
+}
+
+.hero-ribbon {
+    display: flex;
+    justify-content: stretch;
+    padding: 28px 5%;
+}
+
+.hero-ribbon-brand {
+    width: 100px;
+    min-height: 30px;
+    height: 36px;
+    flex-shrink: 1;
+}
+.hero-ribbon-spacer {
+    flex-shrink: 10;
+    flex-grow: 1;
+}
+.hero-ribbon-options {
+    width: 250px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: flex-end;
+    align-items: center;
+}
+.hero-slogan {
+    padding: 10% 10% 10px 10%;
+    width: 80%;
+    text-align: center;
+}
+.row {
+    display: flex;
+    padding: 5%;
+    width: 90%;
+    border-bottom: 8px solid #222;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content {
+    text-align:center;
+}
+
+@media only screen and (min-width: 950px) {
+    .content {
+        text-align: left;
+    }
+}
+
+.row::nth-of-type(odd) {
+    flex-wrap: wrap;
+}
+.row::nth-of-type(even) {
+    flex-wrap: wrap-reverse;
+}
+.row-block {
+    width: 425;
+    display: inline;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+.faq {
+    padding: 0px 5%;
+    display: flex;
+    width: 90%;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 8px solid #222;
+}
+
+.footer {
+    padding: 5% 8.5%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(117,117,117);
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.dropdown-select {
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    padding: 8px 5px;
+    border: none;
+}
+.lang-selector {
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    padding-right: 5px;
+    margin-right: 12%;
+}
+.lang-selector::before {
+    align-self: center;
+    display: inline-block;
+    position: relative;
+    font-family: 'Netflix Sans Icon';
+    content: '\e896';
+    left: 0.5rem;
+    top: 100%;
+    font-size: 0.75rem;
+}
+
+button {
+    background-color: #e50914;
+    color: white;
+    min-width: 74px;
+    padding: 0px 0.5rem;
+    font-family:  'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 1rem;
+    border: none;
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+    border-radius: 2px;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    -webkit-box-direction: normal;
+    -webkit-box-flex: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn {
+    padding: 7px 17px;
+    border-radius: 2px;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+.download-popup {
+    border-radius: 16px;
+    border: 2px solid #666;
+}
+
+.accordion-list {
+    width: 75%;
+    padding: 0px;
+}
+
+.accordion-list-item {
+    list-style-type: none;
+    position:relative;
+}
+.accordion-title {
+    margin: 5px;
+    padding: 3% 4%;
+    min-width: 350px;
+    width: 100%;
+    flex-shrink: 1;
+    background-color: rgb(48,48,48);
+    color: white;
+    text-align: left;
+    font-size: 1.625rem;
+}
+.accordion-content {
+    margin: 0px 3px;
+    background-color: #666;
+    color: white;
+}
+.closed {
+    display: none;
+}
+.x-icon {
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    overflow: hidden;
+    height: 1em;
+    width: 1em;
+    fill: #fff;
+}
+
+.chevron {
+    fill: #fff;
+}
+
+.x-icon-closed {
+    transform: translateY(-50%) rotate(-45deg);
+}
+.netflix-logo {
+    fill: #e50914;
+}
+.signup-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:0px 15% 10% 15%;
+    width: 70%;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
