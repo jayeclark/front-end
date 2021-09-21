@@ -1,2 +1,2 @@
 # Front End Portfolio
-This project clones major websites using both vanilla JS/HTML/CSS and React. 
+This project clones major websites in order to demonstrate front end development skills. Each website is browsable both as a vanilla JS/HTML site with limited functionality, and as a React site with improved functionality using dummy data. A navigation bar at the top allows toggling between react and vanilla js, as well as navigating through the cloned sites and navigating to a random site in the collection.
