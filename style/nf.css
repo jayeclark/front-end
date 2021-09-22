@@ -379,13 +379,17 @@ input::placeholder {
     max-width: 950;
 }
 
+.box-art {
+    height: 3em;
+}
+
 .textfield {
     border-radius: 2px;
     border: 1px solid rgb(118,118,118);
     box-sizing: border-box;
     font-size: 16px;
     height: 48px;
-    min-width: 450px;
+    min-width: 300px;
     padding: 10px 10px 0px 10px;
 }
 
@@ -428,6 +432,10 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     max-width: 1100px;
+}
+
+.animation {
+    font-size: 16px;
 }
 
 .watchOnTv .animation {
@@ -538,6 +546,10 @@ input::placeholder {
     .hero-slogan-area, 
     .faq {
         width: auto;
+    }
+
+    .textfield {
+        min-width: 450px;
     }
 
     .btn-large {
@@ -699,6 +711,10 @@ input::placeholder {
     .input_id {
         position: relative;
         height: 60px;
+    }
+
+    .box-art {
+        height: 4.5em;
     }
 
 }
