@@ -47,7 +47,7 @@ body {
 }
 
 h1 {
-    font-size: 3.125rem;
+    font-size: 2.5rem;
     font-weight: bold;
     font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
     line-height: 1.1;
@@ -55,7 +55,7 @@ h1 {
 }
 
 h3 {
-    font-size: 1.625rem;
+    font-size: 1.25rem;
     font-weight: 400;
     font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
@@ -114,6 +114,7 @@ h5 {
     left: 0;
     width: 100%;
 }
+
 .hero-ribbon-area,
 .hero-slogan-area,
 .hero-form-area {
@@ -162,8 +163,8 @@ h5 {
     border-bottom: 8px solid #222;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     position: relative;
+    font-size: 1.25rem;
 }
 
 .row.image {
@@ -173,6 +174,7 @@ h5 {
 .content {
     text-align:center;
     height: 100%;
+    z-index: 3;
 }
 
 @media only screen and (min-width: 950px) {
@@ -181,18 +183,12 @@ h5 {
     }
 }
 
-.row::nth-of-type(odd) {
-    flex-wrap: wrap;
-}
-.row::nth-of-type(even) {
-    flex-wrap: wrap-reverse;
-}
 .row-block {
-    width: 425;
     display: inline;
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: auto;
+    width: 100%;
 }
 
 @media only screen and (max-width: 450px) {
@@ -202,7 +198,7 @@ h5 {
 }
 
 .faq {
-    padding: 0px 5%;
+    padding: 50px 5%;
     display: flex;
     width: 90%;
     justify-items: center;
@@ -211,18 +207,6 @@ h5 {
     border-bottom: 8px solid #222;
 }
 
-@media only screen and (min-width: 950px) {
-    .hero-slogan-area, 
-    .row,
-    .faq {
-        padding: 70px 45px;
-    }
-
-    .hero-slogan-area, 
-    .faq {
-        width: auto;
-    }
-}
 
 .footer {
     padding: 5% 8.5%;
@@ -261,7 +245,7 @@ button {
     box-sizing: border-box;
     display: inline-flex;
     color: white;
-    min-height: 48px;
+    min-height: 35px;
     width: auto;
     min-width: 74px;
     padding: 0px 1em;
@@ -296,9 +280,17 @@ button:hover {
 }
 
 .btn {
+    box-sizing: border-box;
     padding: 7px 17px;
     border-radius: 2px;
+    font-size: 1rem;
+    height: auto;
 }
+
+.btn-large {
+    font-size: 1rem;
+}
+
 
 input::placeholder {
     color: #aaa;
@@ -310,6 +302,9 @@ input::placeholder {
 }
 
 .accordion-list {
+    font-size: 1.625rem;
+    margin: 2em auto;
+    max-width: 815px;
     width: 75%;
     padding: 0px;
 }
@@ -399,27 +394,6 @@ input::placeholder {
     padding-top: 0px;
 }
 
-@media only screen and (min-width: 950px) {
-    .textfield {
-        height: 48px;
-    }
-
-    .signup-form-oneline {
-        border-bottom-right-radius: 0px;
-        border-top-right-radius: 0px;
-        height: 60px!important;
-        padding-top: 0px;
-    }
-
-    button {
-        border-bottom-left-radius: 0px;
-        border-top-left-radius: 0px;
-        min-height: 60px!important;
-    }
-
-}
-
-
 .footer-link:hover {
     text-decoration: underline;
 }
@@ -443,15 +417,16 @@ input::placeholder {
 
 .input_id {
     position: relative;
-    height: 60px;
+    height: 48px;
 }
 
 .row-content-container {
     margin:0px auto;
     padding:0px;
     display:flex;
-    justify-content: space-between;
-    align-items:center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     max-width: 1100px;
 }
 
@@ -466,18 +441,192 @@ input::placeholder {
     height: 100%;
 }
 
+.downloadAndWatch .animation {
+    align-items: center;
+    background-color: black;
+    background-clip: border-box;
+    background-origin: padding-box;
+    border-radius: 0.75em;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    bottom: 8%;
+    box-shadow: 0 0 2em 0 #000;
+    color: white;
+    display: flex;
+    left: 50%;
+    margin: 0px auto;
+    min-width: 240px;
+    padding: 0.5em 0.75em;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 60%;
+}
+
+.watchOnDevice .animation {
+    height: 100%;
+    color: white;
+    left: 50%;
+    margin: 0px auto;
+    max-height: 47%;
+    max-width: 63%;
+    position: absolute;
+    top: 34%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.downloadAndWatch .our-story-card-animation-text {
+    flex-grow:1;
+    flex-shrink:1;
+    margin: 0.3em 0px;
+}
+
+.downloading::after {
+    width: 3em;
+    content: "";
+    height: 3.75em;
+    outline: 2px solid #000;
+    outline-offset: -2px;
+    background: url('../assets/nf-download-icon.gif') center center no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.row-block.image {
+    box-sizing:border-box;
+    display: flex;
+    flex-shrink: 1;
+    flex-grow:0;
+    height: 100%;
+    margin-top: 1em;
+    max-width: 600px;
+    width: 100%;
+}
+
+.row-block.image.watchOnTv .animation-container {
+    margin: -10% 0px 0px 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.row-block.image.downloadAndWatch .animation-container {
+    margin: -8% 0px 0px 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+}
+
+.row-block.image.watchOnDevice .animation-container {
+    margin: -5% -10 0px 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
 @media only screen and (min-width: 950px) {
+    .hero-slogan-area, 
+    .row,
+    .faq {
+        padding: 70px 45px;
+    }
+
+    .hero-slogan-area, 
+    .faq {
+        width: auto;
+    }
+
+    .btn-large {
+        font-size: 1.625rem;
+    }
+
+    h1 {
+        font-size: 3.125rem;
+        font-weight: bold;
+        font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        line-height: 1.1;
+        margin: 0px; 
+    }
+    
+    h3 {
+        font-size: 1.625rem;
+        font-weight: 400;
+        font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .subtitle {
+        display:block;
+        margin: 16px;
+        padding: 0px 5% 20px 5%;
+    }
+    
+    h5 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        margin-block-end: 0px;
+        margin-block-start: 0px;
+        padding: 0px 5% 20px 5%;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .btn {
+        box-sizing: border-box;
+        padding: 7px 17px;
+        border-radius: 2px;
+        font-size: 1rem;
+        height: 60px;
+    }
+
+    .textfield {
+        height: 48px;
+    }
+
+    .signup-form-oneline {
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        height: 60px!important;
+        padding-top: 0px;
+    }
+
+    button {
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        min-height: 60px!important;
+    }
+
+    .row {
+        font-size: 1.625rem;
+    }
+
     .row-block.content {
+        box-sizing:border-box;
         padding-left: 0px;
         padding-right: 3rem;
+        min-width: 400px;
         width: 52%;
         flex-grow: 0;
         flex-shrink: 1;
         margin: -5% 0%;
     }
 
+    .row-content-container {
+        margin:0px auto;
+        padding:0px;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items:center;
+        max-width: 1100px;
+    }
+
     .row-block.image {
         width: 48%;
+        max-width: 425px;
         display: flex;
         flex-grow: 0;
         flex-shrink: 1;
@@ -493,11 +642,63 @@ input::placeholder {
         padding-left: 3rem;
         padding-right: 0px;
     }
-}
 
-.row-block.image.watchOnTv .animation-container {
-    margin: -10% -5% -5% 0px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    position: relative;
+    .row-block.image.watchOnTv .animation-container {
+        margin: -10% -5% -5% 0px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        position: relative;
+    }
+
+    .row-block.image.downloadAndWatch .animation-container {
+        margin: -8% 0px -4% -15%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        position: relative;
+        width: 100%;
+        min-height: 100px;
+    }
+
+    .row-block.image.watchOnDevice .animation-container {
+        margin: -5% -10 0px 0px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        position: relative;
+    }
+
+    .watchOnTv .animation {
+        max-height: 54%;
+        max-width: 73%;
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        height: 100%;
+    }
+
+    .watchOnDevice .animation {
+        height: 100%;
+        color: white;
+        left: 50%;
+        margin: 0px auto;
+        max-height: 47%;
+        max-width: 63%;
+        position: absolute;
+        top: 34%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+    }
+    
+    .downloadAndWatch .our-story-card-animation-text {
+        flex-grow:1;
+        flex-shrink:1;
+        margin: 0.3em 0px;
+    }
+
+    .input_id {
+        position: relative;
+        height: 60px;
+    }
+
 }
