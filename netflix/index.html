@@ -43,20 +43,21 @@
                 </div>  
               </div>
               <div class="hero-slogan-area">
-                <div class="hero-slogan" style="padding-bottom:0">
-                    <h1>Unlimited movies, TV shows, and more.</h1>
-                    <h3>Watch anywhere. Cancel anytime.</h3>
-                    <h5 style="padding:0px 15% 0px 15%;margin-bottom:0px">Ready to watch? Enter your email to create or restart your membership.</h5>
+                <div class="hero-splash" style="padding-bottom:0">
+                    <h1>Unlimited movies, TV<br>shows, and more.</h1>
+                    <h3 class="subtitle">Watch anywhere. Cancel anytime.</h3>
+                    <form class="signup-form" style="min-height:7vh">
+                      <h5>Ready to watch? Enter your email to create or restart your membership.</h5>
+                      <label class="input_id" placeholder="email">
+                        <input id="id_email_hero" onfocus="inputFocus('id_email_hero')" onblur="inputBlur('id_email_hero')" type="email" class="textfield signup-form-oneline" value=""></input>
+                        <label for="id_email_hero" class="label-visible">Email address</label>
+                      </label>
+                       <button type="submit" style="font-size:1.625rem;">
+                        <span class="hero-form">Get Started</span>
+                        <span class="chevron-span"><svg class="chevron" viewBox="0 0 6 12" xmlns="http://www.w3.org/2000/svg"><desc>chevron</desc><path d="M.61 1.312l.78-.624L5.64 6l-4.25 5.312-.78-.624L4.36 6z" fill="white" fill-rule="evenodd"></path></svg></span>
+                      </button>
+                    </form>
                 </div>  
-              </div>
-              <div class="hero-form-area">
-                <form class="signup-form" style="min-height:7vh">
-                  <input type="email" value="" style="margin: 8px 0px;width:428px;padding:18px 8px;flex-grow:10" placeholder="Email address" id="signup-email"></input>
-                  <button type="submit" style="margin: 8px 0px;height:inherit;padding:0.5rem;vertical-align:middle;flex-grow:1;max-width:250px;min-width:215px;">
-                    <span style="height:80%;font-size:1.625rem;padding:0.5rem 0;font-stretch:100%;">Get Started</span>
-                    <span style="display:inline-block;height:50%;margin-left:10px;margin-top:5px;"><svg class="chevron" viewBox="0 0 6 12" height="100%" xmlns="http://www.w3.org/2000/svg"><desc>chevron</desc><path d="M.61 1.312l.78-.624L5.64 6l-4.25 5.312-.78-.624L4.36 6z" fill="white" fill-rule="evenodd"></path></svg></span>
-                  </button>
-                </form>
               </div>
             </div>
           </div> 
@@ -240,5 +241,23 @@
       </div>
     </div>
     
+    <script>
+      // input label class changes onfocus
+      function inputFocus(id) {
+        console.log(id);
+        let el = document.getElementById(id);
+        let parent = el.parentElement;
+        let label = parent.getElementsByTagName('label')[0];
+        label.classList.add('input-hastext');
+      }
+
+      function inputBlur(id) {
+        let el = document.getElementById(id);
+        let parent = el.parentElement;
+        let label = parent.getElementsByTagName('label')[0];
+        label.classList.remove('input-hastext');
+      }
+    </script>
+
   </body>
 </html>
