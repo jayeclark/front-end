@@ -305,20 +305,21 @@ input::placeholder {
     font-size: 1.625rem;
     margin: 2em auto;
     max-width: 815px;
-    width: 75%;
+    width: 90%;
     padding: 0px;
 }
 
 .accordion-list-item {
     list-style-type: none;
     position:relative;
+    box-sizing:border-box;
 }
 .accordion-title {
-    margin: 5px;
-    padding: 3% 4%;
-    width: 90%;
+    margin: 5px 0px;
+    padding: 5px 10px;
     flex-shrink: 1;
     background-color: rgb(48,48,48);
+    width: 100%;
     color: white;
     text-align: left;
     font-size: 1rem;
