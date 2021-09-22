@@ -316,6 +316,7 @@ input::placeholder {
 }
 .accordion-title {
     margin: 5px 0px;
+    max-width: 90vw;
     padding: 5px 10px;
     flex-shrink: 1;
     background-color: rgb(48,48,48);
