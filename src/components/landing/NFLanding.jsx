@@ -75,7 +75,7 @@ export function Landing() {
                   videoUrl = {row.videoUrl}
                   animationCardClass = {row.animationCardClass}
                   animationCardContent = {row.animationCardContent}
-                  isEven = {i % 2 === 0}
+                  isEven = {i % 2 === 0 ? true : false}
                 ></Row>
       )}
     </div>

@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import '../../styles/nf.css';
-import {Landing} from '../landing/NFLanding.js';
+import {Landing} from '../landing/NFLanding.jsx';
 
 export function Netflix() {
 

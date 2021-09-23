@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import '../../styles/nf.css';
 
 export function Row({title,subtitle,imageUrl,animationRowClass,videoUrl,animationCardClass,animationCardContent,isEven}) {
@@ -8,8 +7,8 @@ export function Row({title,subtitle,imageUrl,animationRowClass,videoUrl,animatio
   
     return (
   
-      <div className={isEven ? "row even-row" : "row"}>
-        <div className="row-content-container">
+      <div className="row">
+        <div className={isEven ? "row-content-container even-row" : "row-content-container"}>
           <div className="row-block content">
             <h1>{title}</h1>
             <h3>{subtitle}</h3>
