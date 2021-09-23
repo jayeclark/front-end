@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import nfIcon from './assets/nf-favicon.ico';
 import {useState} from 'react';
 import './App.css';
-import {Netflix} from './components/main/Netflix.js';
+import {Netflix} from './components/main/Netflix.jsx';
 
 function App() {
 
