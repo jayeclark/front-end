@@ -1,0 +1,770 @@
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 400 600;
+    src: url("nf-NetflixSansRegular.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 1 200;
+    src: url("nf-NetflixSansThin.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 200 399;
+    src: url("nf-NetflixSansLight.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 600 700;
+    src: url("nf-NetflixSansMedium.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 700 800;
+    src: url("nf-NetflixSansBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 800 1000;
+    src: url("nf-NetflixSansBlack.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Netflix Sans Icon';
+    src: url("nf-NetflixSansIcon.woff") format("woff");
+}
+
+body {
+    background-color: black;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    color: white;
+    margin: 0px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    line-height: 1.1;
+    margin: 0px; 
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.subtitle {
+    display:block;
+    margin: 16px;
+    padding: 0px 5% 20px 5%;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    padding: 0px 5% 20px 5%;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.hero-section {
+    grid-area: 1 / 1 / span 1 / span 1;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0) 60%, rgba(0,0,0,0.8)),
+                      url("../assets/nf-IT-en-20210823-popsignuptwoweeks-perspective_alpha_website_large.jpeg");
+    background-size: cover;
+}
+
+.rows-section {
+    grid-area: 2 / 1 / span 1 / span 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-section {
+    grid-area: 3 / 1 / span 1 / span 1;
+}
+.footer-section {
+    grid-area: 4 / 1 / span 1 / span 1;
+}
+
+.hero {
+    display: block;
+    height: auto;
+    border-bottom: 8px solid #222;
+}
+
+.hero-content-wrapper {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.hero-ribbon-area,
+.hero-slogan-area,
+.hero-form-area {
+    display: block;
+}
+
+.hero-slogan-area {
+    padding: 50px 5%;
+    position: relative;
+    text-align: center!important;
+}
+
+.hero-ribbon {
+    display: flex;
+    justify-content: stretch;
+    padding: 28px 5%;
+}
+
+.hero-ribbon-brand {
+    width: 100px;
+    min-height: 30px;
+    height: 36px;
+    flex-shrink: 1;
+}
+.hero-ribbon-spacer {
+    flex-shrink: 10;
+    flex-grow: 1;
+}
+.hero-ribbon-options {
+    width: 250px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media only screen and (max-width: 450px) {
+    .hero-lang-select {
+        display: none;
+    }
+
+    .hero-ribbon-options {
+        width: 150px;
+    }
+}
+
+.hero-splash {
+    padding: 75px 0px;
+    width: 100%;
+    max-width: 950px;
+    text-align: center;
+    margin: auto;
+}
+.row {
+    display: block;
+    padding: 50px 5%;
+    border-bottom: 8px solid #222;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 1.25rem;
+}
+
+.row.image {
+    box-sizing:border-box;
+}
+
+.content {
+    text-align:center;
+    height: 100%;
+    z-index: 3;
+}
+
+@media only screen and (min-width: 950px) {
+    .content {
+        text-align: left;
+    }
+}
+
+.row-block {
+    display: inline;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    width: 100%;
+}
+
+@media only screen and (max-width: 450px) {
+    .row-block {
+        width: 90%;
+    }
+}
+
+.faq {
+    padding: 50px 5%;
+    display: flex;
+    width: 90%;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 8px solid #222;
+}
+
+
+.footer {
+    padding: 5% 8.5%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(117,117,117);
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.dropdown-select {
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    padding: 8px 5px;
+    border: none;
+}
+.lang-selector {
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    padding-right: 5px;
+    margin-right: 12%;
+}
+.lang-selector::before {
+    align-self: center;
+    display: inline-block;
+    position: relative;
+    font-family: 'Netflix Sans Icon';
+    content: '\e896';
+    left: 0.5rem;
+    top: 100%;
+    font-size: 0.75rem;
+}
+
+button {
+    background-color: #e50914;
+    box-sizing: border-box;
+    display: inline-flex;
+    color: white;
+    min-height: 35px;
+    width: auto;
+    min-width: 74px;
+    padding: 0px 1em;
+    font-family:  'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 1rem;
+    border: none;
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+    border-radius: 2px;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    position: relative;
+    -webkit-box-direction: normal;
+    -webkit-box-flex: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+svg {
+    display: block;
+}
+
+button:hover {
+    background-color: rgb(244,6,18);
+}
+
+.hero-form {
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 0.5rem 0px;
+}
+
+.btn {
+    box-sizing: border-box;
+    padding: 7px 17px;
+    border-radius: 2px;
+    font-size: 1rem;
+    height: auto;
+}
+
+.btn-large {
+    font-size: 1rem;
+}
+
+
+input::placeholder {
+    color: #aaa;
+}
+
+.download-popup {
+    border-radius: 16px;
+    border: 2px solid #666;
+}
+
+.accordion-list {
+    font-size: 1.625rem;
+    margin: 2em auto;
+    max-width: 815px;
+    width: 90%;
+    padding: 0px;
+}
+
+.accordion-list-item {
+    list-style-type: none;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 1.125rem;
+}
+.accordion-title {
+    margin: 5px 0px;
+    max-width: 90vw;
+    padding: 0.8em 1.2em;
+    flex-shrink: 1;
+    background-color: rgb(48,48,48);
+    width: 100%;
+    color: white;
+    text-align: left;
+    font-size: 1.125rem;
+}
+.accordion-content {
+    margin: 0px 3px;
+    background-color: #666;
+    color: white;
+}
+.closed {
+    display: none;
+}
+.x-icon {
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    overflow: hidden;
+    height: 1em;
+    width: 1em;
+    fill: #fff;
+}
+
+.chevron {
+    fill: #fff;
+    height: inherit;
+}
+
+.chevron-span {
+    width: 0.35em;
+    height: 0.75em;
+    margin-left:0.5em;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+    position: relative;
+}
+
+.x-icon-closed {
+    transform: translateY(-50%) rotate(-45deg);
+}
+.netflix-logo {
+    fill: #e50914;
+}
+.signup-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 0px;
+    padding:0px 5%;
+    max-width: 950;
+}
+
+.box-art {
+    height: 3em;
+}
+
+.textfield {
+    border-radius: 2px;
+    border: 1px solid rgb(118,118,118);
+    box-sizing:border-box;
+    font-size: 14px;
+    height: 48px;
+    min-width: 300px;
+    padding: 10px 10px 0px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-grow:1;
+}
+
+.signup-form-oneline {
+    height: 48px!important;
+    padding-top: 0px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.label-visible {
+    color: rgb(140,140,140);
+    top: 50%;
+    left: 10px;
+    position: absolute;
+    transition: font .1s ease,top .1s ease,transform .1s ease,-webkit-transform .1s ease,-moz-transform .1s ease,-o-transform .1s ease;
+    transform: translateY(-50%);
+}
+
+.input-hastext {
+    font-size: 11px;
+    font-weight: bold;
+    left: 10px;
+    top: 4px;
+    transform: translateY(0%);
+}
+
+.input_id {
+    position: relative;
+    height: 48px;
+    margin-bottom:10px;
+    width: auto;
+    flex-grow:1;
+}
+
+.row-content-container {
+    margin:0px auto;
+    padding:0px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+}
+
+.animation {
+    font-size: 16px;
+}
+
+.watchOnTv .animation {
+    max-height: 54%;
+    max-width: 73%;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+}
+
+.downloadAndWatch .animation {
+    align-items: center;
+    background-color: black;
+    background-clip: border-box;
+    background-origin: padding-box;
+    border-radius: 0.75em;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    bottom: 8%;
+    box-shadow: 0 0 2em 0 #000;
+    color: white;
+    display: flex;
+    left: 50%;
+    margin: 0px auto;
+    min-width: 240px;
+    padding: 0.5em 0.75em;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 60%;
+}
+
+.watchOnDevice .animation {
+    height: 100%;
+    color: white;
+    left: 50%;
+    margin: 0px auto;
+    max-height: 47%;
+    max-width: 63%;
+    position: absolute;
+    top: 34%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.downloadAndWatch .our-story-card-animation-text {
+    flex-grow:1;
+    flex-shrink:1;
+    margin: 0.3em 0px;
+}
+
+.downloading::after {
+    width: 3em;
+    content: "";
+    height: 3.75em;
+    outline: 2px solid #000;
+    outline-offset: -2px;
+    background: url('../assets/nf-download-icon.gif') center center no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.row-block.image {
+    box-sizing:border-box;
+    display: flex;
+    flex-shrink: 1;
+    flex-grow:0;
+    height: 100%;
+    margin-top: 1em;
+    max-width: 600px;
+    width: 100%;
+}
+
+.row-block.image.watchOnTv .animation-container {
+    margin: -10% 0px 0px 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.row-block.image.downloadAndWatch .animation-container {
+    margin: -8% 0px 0px 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+}
+
+.row-block.image.watchOnDevice .animation-container {
+    margin: -5% -10 0px 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+@media only screen and (min-width: 950px) {
+    .hero-slogan-area, 
+    .row,
+    .faq {
+        padding: 70px 45px;
+    }
+
+    .hero-slogan-area, 
+    .faq {
+        width: auto;
+    }
+
+    .textfield {
+        min-width: 450px;
+        font-size: 16px;
+    }
+
+    .btn-large {
+        font-size: 1.625rem;
+    }
+
+    h1 {
+        font-size: 3.125rem;
+        font-weight: bold;
+        font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        line-height: 1.1;
+        margin: 0px; 
+    }
+    
+    h3 {
+        font-size: 1.625rem;
+        font-weight: 400;
+        font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .subtitle {
+        display:block;
+        margin: 16px;
+        padding: 0px 5% 20px 5%;
+    }
+    
+    h5 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        margin-block-end: 0px;
+        margin-block-start: 0px;
+        padding: 0px 5% 20px 5%;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .btn {
+        box-sizing: border-box;
+        padding: 7px 17px;
+        border-radius: 2px;
+        font-size: 1rem;
+        height: 60px;
+    }
+
+    .textfield {
+        height: 48px;
+    }
+
+    .signup-form-oneline {
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        height: 60px!important;
+        padding-top: 0px;
+    }
+
+    button {
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        min-height: 60px!important;
+    }
+
+    .row {
+        font-size: 1.625rem;
+    }
+
+    .input-hastext {
+        font-size: 13px;
+        font-weight: bold;
+        left: 10px;
+        top: 6px;
+        transform: translateY(0%);
+    }
+
+    .row-block.content {
+        box-sizing:border-box;
+        padding-left: 0px;
+        padding-right: 3rem;
+        min-width: 400px;
+        width: 52%;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin: -5% 0%;
+    }
+
+    .row-content-container {
+        margin:0px auto;
+        padding:0px;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items:center;
+        max-width: 1100px;
+    }
+
+    .row-block.image {
+        width: 48%;
+        max-width: 425px;
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 1;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .row-content-container.even-row {
+        flex-direction: row-reverse;
+    }
+
+    .row-content-container.even-row .row-block.content {
+        padding-left: 3rem;
+        padding-right: 0px;
+    }
+
+    .row-block.image.watchOnTv .animation-container {
+        margin: -10% -5% -5% 0px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        position: relative;
+    }
+
+    .row-block.image.downloadAndWatch .animation-container {
+        margin: -8% 0px -4% -15%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        position: relative;
+        width: 100%;
+        min-height: 100px;
+    }
+
+    .accordion-title {
+        margin: 5px;
+        padding: 3% 4%;
+        min-width: 350px;
+        width: 100%;
+        flex-shrink: 1;
+        background-color: rgb(48,48,48);
+        color: white;
+        text-align: left;
+        font-size: 1.625rem;
+    }
+
+    .row-block.image.watchOnDevice .animation-container {
+        margin: -5% -10 0px 0px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        position: relative;
+    }
+
+    .watchOnTv .animation {
+        max-height: 54%;
+        max-width: 73%;
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        height: 100%;
+    }
+
+    .watchOnDevice .animation {
+        height: 100%;
+        color: white;
+        left: 50%;
+        margin: 0px auto;
+        max-height: 47%;
+        max-width: 63%;
+        position: absolute;
+        top: 34%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+    }
+    
+    .downloadAndWatch .our-story-card-animation-text {
+        flex-grow:1;
+        flex-shrink:1;
+        margin: 0.3em 0px;
+    }
+
+    .input_id {
+        position: relative;
+        height: 60px;
+    }
+
+    .box-art {
+        height: 4.5em;
+    }
+
+    .signup-form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 0.85rem;
+        margin: auto;
+        margin-top: 0px;
+        padding:0px 15% 10% 15%;
+        max-width: 950;
+    }
+
+}
