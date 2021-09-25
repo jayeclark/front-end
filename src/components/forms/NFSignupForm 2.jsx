@@ -4,6 +4,7 @@ import {useState, useRef} from 'react';
 
 export function SignupForm({formName}) {
 
+    console.log(formName);
     const emailRef = useRef(null);
 
     const [form, setForm] = useState([

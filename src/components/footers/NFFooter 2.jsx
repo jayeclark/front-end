@@ -36,8 +36,8 @@ export function Footer() {
         <div style={{width:"100%",flexGrow:0,marginTop:"20px"}}>
           <div className="lang-selector" style={{width:"130px",marginRight:"0px",paddingRight:"0px",borderColor: "rgb(48,48,48)",color:"rgb(117,117,117)"}}>
             
-            <select className="dropdown-select" defaultValue="en" style={{margin:"8px",color: "rgb(117,117,117)",fontSize:"1rem"}} id="language-swapper-footer" tabIndex="0" >
-              <option lang="en" value="en">English</option>
+            <select className="dropdown-select" style={{margin:"8px",color: "rgb(117,117,117)",fontSize:"1rem"}} id="language-swapper-footer" tabindex="0" >
+              <option selected="" lang="en" value="en">English</option>
               <option lang="es" value="es">Español</option>
             </select>
 

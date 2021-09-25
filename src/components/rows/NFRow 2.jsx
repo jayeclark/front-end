@@ -17,7 +17,7 @@ export function Row({title,subtitle,imageUrl,animationRowClass,videoUrl,animatio
             <div className="animation-container">
               <img alt="" style={{borderBottom:"2px solid rgba(0,0,0,0)", borderTop: "2px solid rgba(0,0,0,0)", height:"auto", maxWidth:"100%",position:"relative",zIndex:2}} src={imageUrl} />
               <div className={cardClasses}>
-                {videoUrl ? <video className="animation-video" autostart="true" autoPlay={true} playsInline={true} muted={true} loop={true}><source src={videoUrl} type="video/mp4" /></video> : null}
+                {videoUrl ? <video className="animation-video" autostart={true} autoPlay={true} playsInline={true} muted={true} loop={true}><source src={videoUrl} type="video/mp4" /></video> : null}
                 {animationCardContent}
               </div>
             </div>

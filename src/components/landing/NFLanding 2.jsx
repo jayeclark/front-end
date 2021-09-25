@@ -57,6 +57,8 @@ export function Landing() {
                 },
               ];
 
+  console.log(rows);
+
   return (
     <>
     <div className="hero-section">
