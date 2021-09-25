@@ -51,14 +51,10 @@ body {
 }
 
 a {
-    color: rgb(41,151,255);
+    color: rgb(0, 102, 204);
     cursor: pointer;
     font-style: normal;
     text-decoration-line: none;
-}
-
-a.iphone-13-pro {
-    color: rgb(0, 102, 204);
 }
 
 .hero-section {
@@ -413,39 +409,27 @@ a.footer-nav-child:hover {
 }
 
 .footer-shop {
-    font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
     display: flex;
     flex-wrap: nowrap;
-    border-bottom: 1px solid rgb(66,66,69);
+    border-bottom-color: rgb(66,66,69);
     color: rgb(110, 110, 115);
-    font-size: 12px;
-    margin: 0px auto 7px auto;
-    padding-bottom: 8px;
+    font-size: 13px;
+    margin-bottom: 0px auto 7px auto;
+    padding: 0px 22px 8px 22px;
     width: 980;
 }
 .footer-legal {
-    font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
     border-bottom-color: rgb(66,66,69);
     display: flex;
     flex-wrap: nowrap;
     color: rgb(110, 110, 115);
-    font-size: 12px;
-    margin: 0px auto 7px auto;
-    width: 980;
+    font-size: 13px;
+    margin-bottom: 7px;
+    padding-bottom: 18px;
 }
 
-.footer-legal-left {
-    flex-basis: 40%;
-}
-
-.footer-legal-center {
-    flex-basis: 60%;
-    text-align: center;
-}
-
-.footer-legal-right {
-    flex-basis: 25%;
-    text-align: right;
+.footer-legal-block {
+    flex-basis: 33%;
 }
 
 .not-visible {
