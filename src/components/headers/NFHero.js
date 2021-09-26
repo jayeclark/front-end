@@ -1,5 +1,4 @@
-import '../../styles/nf.css';
-import SignupForm from '../forms/NFSignupForm.jsx';
+import SignupForm from '../forms/NFSignupForm.js';
 
 export function Hero() {
     return (

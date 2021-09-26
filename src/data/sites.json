@@ -2,5 +2,9 @@
     "nf": {
         "title": "Netflix - Watch TV Shows Online, Watch Movies Online",
         "metaDescription": "Watch Netflix movies &amp; TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more."
+    },
+    "ap": {
+        "title": "Apple",
+        "metaDescription": "Meet our most powerful lineup ever: iPhone&nbsp;13, iPhone&nbsp;13&nbsp;mini, iPhone&nbsp;13&nbsp;Pro, and iPhone&nbsp;13&nbsp;Pro&nbsp;Max. Available&nbsp;now."
     }
 }

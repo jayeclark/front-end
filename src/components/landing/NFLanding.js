@@ -1,8 +1,7 @@
-import '../../styles/nf.css';
-import Hero from '../headers/NFHero.jsx';
-import Row from '../rows/NFRow.jsx';
-import FAQ from '../lists/NFFaq.jsx';
-import Footer from '../footers/NFFooter.jsx';
+import Hero from '../headers/NFHero.js';
+import Row from '../rows/NFRow.js';
+import FAQ from '../lists/NFFaq.js';
+import Footer from '../footers/NFFooter.js';
 import nfTv from '../../assets/nf-tv.png';
 import nfVideoTv0819 from '../../assets/videos/nf-video-tv-0819.m4v';
 import nfMobile0819 from '../../assets/nf-mobile-0819.jpeg';
@@ -81,7 +80,7 @@ export function Landing() {
         <FAQ></FAQ>
     </div>
     <div className="footer-section">
-        <Footer></Footer>
+        <Footer cols="5"></Footer>
     </div>
     </>
   );

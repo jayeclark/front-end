@@ -1,6 +1,4 @@
-import '../../styles/nf.css';
-
-export function Footer(cols) {
+export function Footer({cols}) {
 
   const sections = [
                       {
@@ -65,52 +63,63 @@ export function Footer(cols) {
                       }
                    ];
 
-    const colArray = sections.reduce((section,i)=> {
-      let targetCol = section["col" + cols + "colLayout"];
-      if (a[targetCol] !== null) {
-        a[targetCol].push(section);
-      } else {
-        a[targetCol] = [];
-        a[targetCol].push(section);
+    const colArray = sections.reduce((a,b)=> {
+      let targetCol = Number(b["col" + cols + "colLayout"]);
+      if (a[targetCol-1] === undefined) {
+        a[targetCol-1] = [ b ];
       }
-    }, Array(cols))
+      else if (a[targetCol-1].length > 0) {
+        a[targetCol-1].push(b);
+      } 
+      return a;
+    }, [...Array(Number(cols))])
 
     return (
-      <div class="footer">
-        <div class="footer-nav">
+      <div className="footer">
+        <div className="footer-nav">
           {colArray.map((col,i)=>
             <FooterCol sections={col} key={i} col={i+1}></FooterCol>
           )}
         </div>
-        <section style="padding:34px 0px 21px 0px">
-            <div class="footer-shop">
-              <div style="color: rgb(110, 110, 115);padding:0px;margin:0px;">More ways to shop: <a>Find an Apple Store</a> or <a>other retailer</a> near you. Or call 1-800-MY-APPLE.</div>
+        <section className="footer-shop-legal-container">
+            <div id="footer-shop" className="footer-shop">
+              <div className="footer-shop-content">More ways to shop: <a href="#footer-shop">Find an Apple Store</a> or <a href="#footer-shop">other retailer</a> near you. Or call 1-800-MY-APPLE.</div>
             </div>
-            <div class="footer-legal">
-              <div class="footer-legal-left">Copyright © 2021 FakeApple Inc. All rights reserved.</div>
-              <div class="footer-legal-center">
-                <a class="footer-nav-child">Privacy Policy</a><span style="display:inline-block;padding: 0px 5px;border-right:1px solid rgb(110,110,115)">&nbsp;</span><span style="display:inline-block;padding: 0px 5px">&nbsp;</span>
-                <a class="footer-nav-child">Terms of Use</a><span style="display:inline-block;padding: 0px 5px;border-right:1px solid rgb(110,110,115)">&nbsp;</span><span style="display:inline-block;padding: 0px 5px">&nbsp;</span>
-                <a class="footer-nav-child">Sales and Refunds</a><span style="display:inline-block;padding: 0px 5px;border-right:1px solid rgb(110,110,115)">&nbsp;</span><span style="display:inline-block;padding: 0px 5px">&nbsp;</span>
-                <a class="footer-nav-child">Legal</a><span style="display:inline-block;padding: 0px 5px;border-right:1px solid rgb(110,110,115)">&nbsp;</span><span style="display:inline-block;padding: 0px 5px">&nbsp;</span>
-                <a class="footer-nav-child">Site Map</a></div>
-              <div class="footer-legal-right"><a class="footer-nav-child">United States</a></div>
+            <div id="footer-legal" className="footer-legal">
+              <div className="footer-legal-left">Copyright © 2021 FakeApple Inc. All rights reserved.</div>
+              <div className="footer-legal-center">
+                <a className="footer-nav-child" href="#footer-legal">Privacy Policy</a><span className="pipeleft">&nbsp;</span><span className="piperight">&nbsp;</span>
+                <a className="footer-nav-child" href="#footer-legal">Terms of Use</a><span className="pipeleft">&nbsp;</span><span className="piperight">&nbsp;</span>
+                <a className="footer-nav-child" href="#footer-legal">Sales and Refunds</a><span className="pipeleft">&nbsp;</span><span className="piperight">&nbsp;</span>
+                <a className="footer-nav-child" href="#footer-legal">Legal</a><span className="pipeleft">&nbsp;</span><span className="piperight">&nbsp;</span>
+                <a className="footer-nav-child" href="#footer-legal">Site Map</a></div>
+              <div className="footer-legal-right"><a className="footer-nav-child" href="#footer-legal">United States</a></div>
             </div>  
           </section>
       </div>
     )
 }
 
-function FooterCol({sections,col}) {
+function FooterCol({sections, col}) {
   return (
-    <div id={"footer-col-"+col} class="footer-nav-group">
-      {sections.map((section)=>{
-        <button id={section.hyphenated} class="footer-nav-title">{section.title}</button>
-        {section.children.map((child)=>
-          <div class={"footer-nav-child " + section.hyphenated}><a class="footer-nav-child">{child}</a></div>
-          )}
+    <div id={"footer-col-"+col} className="footer-nav-group">
+      {sections.map((section,j)=>{
+        return (
+          <FooterTitle key={j} id={section.hyphenated} title={section.title} items={section.children} col={col}></FooterTitle>
+        )
       })}
     </div>
+  )
+}
+
+function FooterTitle({id,title,items,col}) {
+  return (
+    <>
+    <button id={id} className="footer-nav-title">{title}</button>
+    {items.map((item,k)=>
+      <div key={k} className={"footer-nav-child " + id}><a className="footer-nav-child" href={"footer-col-"+col}>{item}</a></div>
+      )}
+    </>
   )
 }
 

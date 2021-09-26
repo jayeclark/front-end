@@ -1,4 +1,3 @@
-import '../../styles/nf.css';
 import React from 'react';
 import {useState, useRef} from 'react';
 
@@ -19,9 +18,12 @@ export function SignupForm({formName}) {
         }
       }
     ]);
+
+    const inputField = formName+'-email';
   
-    const getValue = (id, property) => {
-      return form.filter(x => x.id === id)[0][property];
+    function getValue(id, property) {
+      let tempForm = form.filter(x => x.id === id)[0];
+      return tempForm[property];
     }
   
     const handleChange = e => {
@@ -55,9 +57,9 @@ export function SignupForm({formName}) {
     }
 
     React.useEffect(()=>{
-      let emailFocus = getValue(formName+'-email','focused');
+      let emailFocus = getValue(inputField,'focused');
       if (emailFocus === true) {emailRef.current.focus();}
-    },[form])
+    },[getValue, inputField])
   
     return (
       <form className="signup-form">

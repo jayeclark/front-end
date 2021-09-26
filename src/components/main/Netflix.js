@@ -1,13 +1,13 @@
 import {useState} from 'react';
-import '../../styles/nf.css';
-import {Landing} from '../landing/NFLanding.jsx';
+import React from 'react';
+import {Landing} from '../landing/NFLanding.js';
 
-export function Netflix() {
+function Netflix() {
 
   const [loggedIn, setLoggedIn] = useState(false);
 
   return (
-    <div className="Site">
+    <div className="site">
       {loggedIn === false ? <Landing></Landing> : null}
       {loggedIn === true ? <Boilerplate></Boilerplate> : null}
     </div>

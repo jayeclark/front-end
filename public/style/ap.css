@@ -51,14 +51,10 @@ body {
 }
 
 a {
-    color: rgb(41,151,255);
+    color: rgb(0, 102, 204);
     cursor: pointer;
     font-style: normal;
     text-decoration-line: none;
-}
-
-a.iphone-13-pro {
-    color: rgb(0, 102, 204);
 }
 
 .hero-section {
@@ -199,7 +195,7 @@ nav {
     min-width: 1024px;
     width: 100%;
     position: fixed;
-    top: 0px;
+    top: 47px;
     left: 0px;
     right: 0px;
     z-index: 9999;
@@ -219,7 +215,7 @@ nav {
     position: relative;
     pointer-events: auto;
     text-align:left;
-    top: -8px;
+    top: -5px;
 }
 
 .nav-header {
@@ -334,7 +330,7 @@ nav {
     padding: 0px;
 }
 
-.content {
+.ap-content {
     text-align: center;
     display: flex;
 }
@@ -371,6 +367,28 @@ nav {
     margin-right: 20px;
     padding-top: 24px;
     font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
+    text-align: left;
+}
+
+.footer-shop-legal-container {
+    padding: 34px 0px 21px 0px;
+}
+
+.footer-shop-content {
+    color: rgb(110, 110, 115);
+    padding: 0px;
+    margin: 0px;
+}
+
+.pipeleft {
+    display: inline-block;
+    padding: 0px 5px; 
+    border-right: 1px solid rgb(110,110,115);
+}
+
+.piperight {
+    display: inline-block;
+    padding: 0px 5px;
 }
 
 .footer-nav-title {
@@ -413,25 +431,23 @@ a.footer-nav-child:hover {
 }
 
 .footer-shop {
-    font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
     display: flex;
     flex-wrap: nowrap;
     border-bottom: 1px solid rgb(66,66,69);
     color: rgb(110, 110, 115);
     font-size: 12px;
     margin: 0px auto 7px auto;
-    padding-bottom: 8px;
-    width: 980;
+    padding: 0px 22px 8px 22px;
+    width: 980px;
 }
 .footer-legal {
-    font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
-    border-bottom-color: rgb(66,66,69);
     display: flex;
     flex-wrap: nowrap;
     color: rgb(110, 110, 115);
     font-size: 12px;
     margin: 0px auto 7px auto;
-    width: 980;
+    padding: 0px 22px 8px 22px;
+    width: 980px;
 }
 
 .footer-legal-left {
@@ -474,7 +490,7 @@ a.footer-nav-child:hover {
 
 }
 
-@media only screen and (min-height: 700px) {
+@media only screen and (max-height: 700px) {
 
     .section-content {
         height: calc(100vh - 48px);

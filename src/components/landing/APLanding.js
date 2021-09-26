@@ -1,19 +1,43 @@
-import '../../styles/nf.css';
-import Nav from '../navs/APGlobalNav.jsx';
-import Hero from '../headers/APHero.jsx';
-import Footer from '../footers/APFooter.jsx';
-import {Ap_iPhone13ProLogoSmall, Ap_iPhone13ProLogoSmall_2x,
-        Ap_iPhone13ProLogoMedium, Ap_iPhone13ProLogoMedium_2x,
-        Ap_iPhone13ProLogoLarge, Ap_iPhone13ProLogoLarge_2x,
-        Ap_iPhone13ProHeroSmall, Ap_iPhone13ProHeroSmall_2x,
-        Ap_iPhone13ProHeroMedium, Ap_iPhone13ProHeroMedium_2x,
-        Ap_iPhone13ProHeroLarge, Ap_iPhone13ProHeroLarge_2x,
-        Ap_iPhone13LogoSmall,  Ap_iPhone13LogoSmall_2x,
-        Ap_iPhone13LogoMedium,  Ap_iPhone13LogoMedium_2x,
-        Ap_iPhone13LogoLarge,  Ap_iPhone13LogoLarge_2x,
-        Ap_iPhone13HeroSmall, Ap_iPhone13HeroSmall_2x,
-        Ap_iPhone13HeroMedium, Ap_iPhone13HeroMedium_2x,
-        Ap_iPhone13HeroLarge, Ap_iPhone13HeroLarge_2x} from '../assets/index.js';
+import Nav from '../nav/APGlobalNav.js';
+import Hero from '../headers/APHero.js';
+import Footer from '../footers/APFooter.js';
+import Ap_iPhone13ProLogoSmall from '../../assets/ap-iphone_13_pro_logo__dx3ikh4nlf0i_small.png';
+import Ap_iPhone13ProLogoSmall_2x from '../../assets/ap-iphone_13_pro_logo__dx3ikh4nlf0i_small_2x.png';
+import Ap_iPhone13ProLogoMedium from '../../assets/ap-iphone_13_pro_logo__dx3ikh4nlf0i_medium.png';
+import Ap_iPhone13ProLogoMedium_2x from '../../assets/ap-iphone_13_pro_logo__dx3ikh4nlf0i_medium_2x.png';
+import Ap_iPhone13ProLogoLarge from '../../assets/ap-iphone_13_pro_logo__dx3ikh4nlf0i_large.png';
+import Ap_iPhone13ProLogoLarge_2x from '../../assets/ap-iphone_13_pro_logo__dx3ikh4nlf0i_large_2x.png';
+import Ap_iPhone13ProHeroSmall from '../../assets/ap-iphone_13_pro_hero__b833cu78x5f6_small.jpeg';
+import Ap_iPhone13ProHeroSmall_2x from '../../assets/ap-iphone_13_pro_hero__b833cu78x5f6_small_2x.jpeg';
+import Ap_iPhone13ProHeroMedium from '../../assets/ap-iphone_13_pro_hero__b833cu78x5f6_medium.jpeg';
+import Ap_iPhone13ProHeroMedium_2x from '../../assets/ap-iphone_13_pro_hero__b833cu78x5f6_medium_2x.jpeg';
+import Ap_iPhone13ProHeroLarge from '../../assets/ap-iphone_13_pro_hero__b833cu78x5f6_large.jpeg';
+import Ap_iPhone13ProHeroLarge_2x from '../../assets/ap-iphone_13_pro_hero__b833cu78x5f6_large_2x.jpeg';
+import Ap_iPhone13LogoSmall from '../../assets/ap-iphone_13_logo__b6g92pxv4zrm_small.png';
+import Ap_iPhone13LogoSmall_2x from '../../assets/ap-iphone_13_logo__b6g92pxv4zrm_small_2x.png';
+import Ap_iPhone13LogoMedium from '../../assets/ap-iphone_13_logo__b6g92pxv4zrm_medium.png';
+import Ap_iPhone13LogoMedium_2x from '../../assets/ap-iphone_13_logo__b6g92pxv4zrm_medium_2x.png';
+import Ap_iPhone13LogoLarge from '../../assets/ap-iphone_13_logo__b6g92pxv4zrm_large.png';
+import Ap_iPhone13LogoLarge_2x from '../../assets/ap-iphone_13_logo__b6g92pxv4zrm_large_2x.png';
+import Ap_iPhone13HeroSmall from '../../assets/ap-iphone_13_hero__fy4bx6w0wfma_small.jpeg';
+import Ap_iPhone13HeroSmall_2x from '../../assets/ap-iphone_13_hero__fy4bx6w0wfma_small_2x.jpeg';
+import Ap_iPhone13HeroMedium from '../../assets/ap-iphone_13_hero__fy4bx6w0wfma_medium.jpeg';
+import Ap_iPhone13HeroMedium_2x from '../../assets/ap-iphone_13_hero__fy4bx6w0wfma_medium_2x.jpeg';
+import Ap_iPhone13HeroLarge from '../../assets/ap-iphone_13_hero__fy4bx6w0wfma_large.jpeg';
+import Ap_iPhone13HeroLarge_2x from '../../assets/ap-iphone_13_hero__fy4bx6w0wfma_large_2x.jpeg';
+
+//import {Ap_iPhone13ProLogoSmall, Ap_iPhone13ProLogoSmall_2x,
+//        Ap_iPhone13ProLogoMedium, Ap_iPhone13ProLogoMedium_2x,
+//        Ap_iPhone13ProLogoLarge, Ap_iPhone13ProLogoLarge_2x,
+//        Ap_iPhone13ProHeroSmall, Ap_iPhone13ProHeroSmall_2x,
+//        Ap_iPhone13ProHeroMedium, Ap_iPhone13ProHeroMedium_2x,
+//        Ap_iPhone13ProHeroLarge, Ap_iPhone13ProHeroLarge_2x,
+//        Ap_iPhone13LogoSmall, Ap_iPhone13LogoSmall_2x,
+//        Ap_iPhone13LogoMedium, Ap_iPhone13LogoMedium_2x,
+//        Ap_iPhone13LogoLarge, Ap_iPhone13LogoLarge_2x,
+//        Ap_iPhone13HeroSmall, Ap_iPhone13HeroSmall_2x,
+//        Ap_iPhone13HeroMedium, Ap_iPhone13HeroMedium_2x,
+//        Ap_iPhone13HeroLarge, Ap_iPhone13HeroLarge_2x} from '../../assets/assetindex.js';
 
 
 export function Landing() {
@@ -42,7 +66,7 @@ export function Landing() {
                           name: 'small', fill: '#231F20', fillRule: 'evenodd',
                           d: "M252.746 83.927c-16.727 0-27.731-11.564-27.731-30.5 0-18.88 11.06-30.444 27.731-30.444s27.731 11.564 27.731 30.444c0 18.936-11.004 30.5-27.731 30.5zm0-51c-9.393 0-15.506 7.485-15.506 20.5 0 13.072 6.113 20.557 15.506 20.557 9.446 0 15.504-7.485 15.504-20.557 0-13.015-6.113-20.5-15.504-20.5zm-47.963 14.69V82.81h-12.005V24.044h11.448v10h.278c1.945-6.871 7.169-10.948 14.06-10.948 1.723 0 3.224.279 4.112.446V34.77c-.944-.392-3.056-.671-5.391-.671-7.724 0-12.502 5.195-12.502 13.518zm-48.246 7.654h-17.228V82.81H126.86V2.203h30.066c15.56 0 26.396 10.781 26.396 26.478 0 15.752-11.057 26.59-26.785 26.59zm-2.89-42.51h-14.338v32.007h14.282c10.837 0 17.005-5.864 17.005-16.031 0-10.166-6.168-15.976-16.949-15.976zM99.503 60.466c0 14.188-12.336 23.851-29.063 23.851-17.173 0-28.677-9.551-29.454-23.405h11.948c.611 7.876 7.447 12.96 17.506 12.96 9.78 0 16.338-5.586 16.393-13.406.055-9.218-6.557-14.356-17.284-14.356h-9.724v-9.72h9.392c9.168 0 15.393-5.418 15.393-12.96 0-7.541-4.835-12.456-14.282-12.456-8.891 0-15.338 4.749-15.949 12.792H42.708C43.708 9.69 54.656.695 70.328.695c16.338 0 26.397 8.995 26.397 21.004 0 10.111-7.058 16.87-16.894 18.937v.279c11.781 1.06 19.672 8.267 19.672 19.551zm-82.9-46.176h-.155L.08 25.979v-12.31L16.494 2.254h12.151v80.555H16.603V14.29z"
                         }],                
-                  cta: "cta-list",
+                  ctaType: "cta-list",
                   classArray: {
                     section: "iphone-13-pro-section", 
                     general: "iphone-13-pro", 
@@ -60,15 +84,15 @@ export function Landing() {
                     heroL: Ap_iPhone13HeroLarge, heroL2x: Ap_iPhone13HeroLarge_2x},
                   svgArray: [
                     {
-                      name: 'large', fill: '#231F20', fillRule: 'evenodd',
+                      name: 'large', fill: '#FFF', fillRule: 'evenodd',
                       d: 'M225.766 112.736v.785c33.349 2.98 55.686 23.239 55.686 54.956 0 39.884-34.921 67.046-82.271 67.046-48.611 0-81.174-26.849-83.374-65.79h33.821c1.728 22.138 21.079 36.429 49.553 36.429 27.685 0 46.25-15.702 46.406-37.685.155-25.909-18.563-40.352-48.926-40.352h-27.526v-27.323h26.585c25.954 0 43.575-15.231 43.575-36.428 0-21.198-13.687-35.015-40.431-35.015-25.168 0-43.416 13.348-45.147 35.957h-33.032C123.516 25.749 154.504.467 198.864.467c46.25 0 74.724 25.282 74.724 59.04 0 28.421-19.979 47.421-47.822 53.229zM46.783 38.68h-.441L.012 71.536V36.934L46.473 4.847h34.396v226.438H46.783V38.68'
                     },
                     {
-                      name: 'medium', fill: '#231F20', fillRule: 'evenodd',
+                      name: 'medium', fill: '#FFF', fillRule: 'evenodd',
                       d: "M164.43 82.183v.569c24.191 2.162 40.395 16.857 40.395 39.866 0 28.931-25.332 48.635-59.68 48.635-35.263 0-58.884-19.476-60.48-47.724h24.534c1.253 16.058 15.291 26.425 35.946 26.425 20.083 0 33.55-11.39 33.663-27.336.112-18.795-13.465-29.272-35.491-29.272h-19.968v-19.82h19.285c18.827 0 31.609-11.049 31.609-26.426 0-15.377-9.928-25.4-29.328-25.4-18.257 0-31.494 9.683-32.75 26.084H88.204C90.257 19.082 112.736.742 144.915.742c33.55 0 54.205 18.34 54.205 42.828 0 20.617-14.493 34.399-34.69 38.613zM34.595 28.462h-.32L.666 52.296V27.195L34.369 3.919h24.952v164.259H34.595V28.462z"
                     },
                     {
-                      name: 'small', fill: '#231F20', fillRule: 'evenodd',
+                      name: 'small', fill: '#FFF', fillRule: 'evenodd',
                       d: "M79.841 40.468v.278c11.783 1.055 19.676 8.226 19.676 19.454 0 14.118-12.339 23.733-29.069 23.733-17.176 0-28.681-9.504-29.459-23.289h11.95c.611 7.837 7.448 12.896 17.509 12.896 9.782 0 16.341-5.559 16.396-13.34.055-9.172-6.558-14.285-17.286-14.285h-9.726v-9.672h9.393c9.17 0 15.396-5.391 15.396-12.895s-4.836-12.395-14.285-12.395c-8.893 0-15.34 4.725-15.952 12.729H42.713C43.713 9.675 54.662.726 70.336.726c16.341 0 26.402 8.949 26.402 20.9 0 10.06-7.059 16.786-16.897 18.842zm-63.24-26.215h-.156L.075 25.884V13.635L16.491 2.277h12.154v80.156H16.601v-68.18z"
                     }
 
@@ -87,14 +111,12 @@ export function Landing() {
     <nav>
       <Nav></Nav>
     </nav>
-    <div class="main">
+    <div className="main">
       {heroes.map((hero,i)=>
-        <Hero key={i} props={hero}></Hero>
+        <Hero key={i} id={"hero-"+i} title={hero.title} logoImgs={hero.logoImgs} lockupImgs={hero.lockupImgs} svgArray={hero.svgArray} ctaType={hero.ctaType} classArray={hero.classArray}></Hero>
       )}
-      <Hero></Hero>
-      <Hero></Hero>
     </div>
-    <Footer></Footer>
+    <Footer cols="5"></Footer>
     </>
   );
 }

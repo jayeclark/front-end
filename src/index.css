@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  display: block;
+}
+
+/* Style the navbar */
+.main-navbar {
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: 99998;
+  font-size: 13px;
+}
+
+/* Navbar links */
+.main-navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+/* Page content */
+.main-content {
+  padding-top: 40px;
+  display: block;
+}
+
+.main-content.invisible {
+  display: none;
+}
+
+.option {
+  padding: 6px 10px;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  vertical-align: middle;
+  cursor: pointer;
+}

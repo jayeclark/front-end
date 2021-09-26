@@ -1,4 +1,3 @@
-import '../../styles/nf.css';
 
 export function Row({title,subtitle,imageUrl,animationRowClass,videoUrl,animationCardClass,animationCardContent,isEven}) {
 

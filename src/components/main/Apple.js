@@ -1,13 +1,12 @@
 import {useState} from 'react';
-import '../../styles/ap.css';
-import {Landing} from '../landing/APLanding.jsx';
+import {Landing} from '../landing/APLanding.js';
 
-export function Apple() {
+function Apple() {
 
   const [loggedIn, setLoggedIn] = useState(false);
 
   return (
-    <div className="Site">
+    <div className="site">
       {loggedIn === false ? <Landing></Landing> : null}
       {loggedIn === true ? <Boilerplate></Boilerplate> : null}
     </div>
@@ -24,4 +23,4 @@ function Boilerplate() {
   )
 }
 
-export default Netflix;
+export default Apple;

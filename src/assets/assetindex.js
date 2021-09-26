@@ -25,3 +25,33 @@ export const Ap_iPhone13HeroLarge_2x = require('ap-iphone_13_hero__fy4bx6w0wfma_
 export const Ap_GlobalNav_Search = require('ap-globalnav_search_image__fca9mfoh8a2q_large.svg');
 export const Ap_GlobalNav_Bag = require('ap-globalnav_bag_image__bmix8075eg4i_large.svg');
 export const Ap_GlobalNav_AppleImage = require('ap-globalnav_apple_image__cxwwnrj0urau_large.svg');
+
+export default {
+    Ap_iPhone13ProLogoSmall,
+    Ap_iPhone13ProLogoSmall_2x,
+    Ap_iPhone13ProLogoMedium,
+    Ap_iPhone13ProLogoMedium_2x,
+    Ap_iPhone13ProLogoLarge,
+    Ap_iPhone13ProLogoLarge_2x,
+    Ap_iPhone13ProHeroSmall,
+    Ap_iPhone13ProHeroSmall_2x,
+    Ap_iPhone13ProHeroMedium,
+    Ap_iPhone13ProHeroMedium_2x,
+    Ap_iPhone13ProHeroLarge,
+    Ap_iPhone13ProHeroLarge_2x,
+    Ap_iPhone13LogoSmall,
+    Ap_iPhone13LogoSmall_2x,
+    Ap_iPhone13LogoMedium,
+    Ap_iPhone13LogoMedium_2x,
+    Ap_iPhone13LogoLarge,
+    Ap_iPhone13LogoLarge_2x,
+    Ap_iPhone13HeroSmall,
+    Ap_iPhone13HeroSmall_2x,
+    Ap_iPhone13HeroMedium,
+    Ap_iPhone13HeroMedium_2x,
+    Ap_iPhone13HeroLarge,
+    Ap_iPhone13HeroLarge_2x,
+    Ap_GlobalNav_Search,
+    Ap_GlobalNav_Bag,
+    Ap_GlobalNav_AppleImage
+}
