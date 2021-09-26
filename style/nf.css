@@ -182,7 +182,7 @@ h5 {
     box-sizing:border-box;
 }
 
-.content {
+.nf-content {
     text-align:center;
     height: 100%;
     z-index: 3;
@@ -226,6 +226,7 @@ h5 {
     flex-wrap: wrap;
     color: rgb(117,117,117);
     font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    text-align: left;
 }
 
 .dropdown-select {
@@ -249,6 +250,14 @@ h5 {
     left: 0.5rem;
     top: 100%;
     font-size: 0.75rem;
+}
+
+.animation-video {
+    width:100%;
+    display:inline-block;
+    height:100%;
+    object-fit: contain;
+    vertical-align: baseline;
 }
 
 button {
@@ -413,6 +422,24 @@ input::placeholder {
     padding-top: 0px;
 }
 
+.footer-col-grp {
+    width: 300px;
+    flex-grow:1;
+    font-size:0.8rem;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.footer-column {
+    width:150px;
+    flex-grow:1;
+    text-align: left;
+}
+
+.footer-link {
+    cursor: pointer;
+}
+
 .footer-link:hover {
     text-decoration: underline;
 }
@@ -504,6 +531,10 @@ input::placeholder {
     flex-grow:1;
     flex-shrink:1;
     margin: 0.3em 0px;
+}
+
+.downloading {
+    z-index: 4!important;
 }
 
 .downloading::after {

@@ -1,0 +1,530 @@
+/** Ultra Light */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 100;
+    src: url("ap-sanfranciscodisplay-ultralight-webfont.woff");
+  }
+  
+  /** Thin */
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 200;
+    src: url("ap-sanfranciscodisplay-thin-webfont.woff");
+  }
+  
+  /** Regular */
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("ap-sanfranciscodisplay-regular-webfont.woff");
+  }
+  
+  /** Medium */
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 500;
+    src: url("ap-sanfranciscodisplay-medium-webfont.woff");
+  }
+  
+  /** Semi Bold */
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 600;
+    src: url("ap-sanfranciscodisplay-semibold-webfont.woff");
+  }
+  
+  /** Bold */ 
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 700;
+    src: url("ap-sanfranciscodisplay-bold-webfont.woff");
+  }
+
+body {
+    font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
+    color: rgb(29, 29, 31);
+    margin: 0px;
+    padding: 0px;
+    font-size: 17px;
+    line-height: 1.4705882353;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: rgb(0, 102, 204);
+    cursor: pointer;
+    font-style: normal;
+    text-decoration-line: none;
+}
+
+.hero-section {
+    display: block;
+}
+
+.sticky-wrapper {
+    display: block;
+}
+
+.sticky-content {
+    display: block;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    height: 1033px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding-top: 175px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.headline-wrapper {
+    margin: none;
+    padding: none;
+}
+
+.copy-container {
+    text-align: center;
+}
+
+.headline {
+    text-align: center;
+    margin-top: 0.8em;
+}
+
+.headline-logo {
+    filter: blur(0.5px);
+}
+
+.link-wrapper {
+    padding: 14px 0px;
+    width: 100%;
+    flex-shrink: 0;
+    margin-top: 83px;
+}
+
+.lockup-container {
+    display: inline-block;
+    max-height: calc(610px - 10vh);
+    position: relative;
+    text-align: center;
+    margin-top: 83px;
+
+}
+.overview-iphone-13-hero {
+    height: 515px;
+    display: block;
+}
+
+.sticky-padding {
+    height: 0px;
+    display: block;
+    background-color: #f5f5f7;
+}
+
+.iphone-13-pro-hero {
+    display: inline-block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.iphone-13-pro {
+    display: inline-block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.iphone-13-pro-section {
+    background-color: #f5f5f7;
+}
+
+.iphone-13-section {
+    background-color: rgb(53,40,60);
+}
+
+a.iphone-13 {
+    color: rgb(254, 194, 235);
+}
+
+.iphone-13-pro.large {
+    height: 237px;
+    width: 793px;
+}
+
+.iphone-13-pro.medium {
+    display: none;
+}
+
+.iphone-13-pro.small {
+    display: none;
+}
+
+.iphone-13.large {
+    height: 245px;
+    width: 284px;
+}
+
+.iphone-13.medium {
+    display: none;
+}
+
+.iphone-13.small {
+    display: none;
+}
+
+.cta-links {
+    margin: 83px 0px 0px 0px;
+    padding: 0px;
+}
+
+.cta {
+     margin: 0px;
+     padding: 0px;
+}
+
+nav {
+    backdrop-filter: saturate(1.8) blur(20px);
+    background-color: rgba(0, 0, 0, 0.8);
+    box-sizing:content-box;
+    font-size: 17px;
+    height: 48px;
+    max-height: 44px;
+    min-width: 1024px;
+    width: 100%;
+    position: fixed;
+    top: 47px;
+    left: 0px;
+    right: 0px;
+    z-index: 9999;
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav-content {
+    margin: 0px auto;
+    padding-left: calc(max(22px, env(safe-area-inset-left)));
+    padding-right: calc(max(22px, env(safe-area-inset-right)));
+    padding-top: 0px;
+    padding-bottom: 0px;
+    box-sizing: content-box;
+    max-width: 980px;
+    z-index: 3;
+    position: relative;
+    pointer-events: auto;
+    text-align:left;
+    top: -5px;
+}
+
+.nav-header {
+    display: none;
+}
+
+.nav-search {
+    display: none;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-between;
+    height: 44px;
+    list-style-image: none;
+    list-style-type: none;
+    list-style-position: outside;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 0px;
+    text-align: left;
+    width: auto;
+    -webkit-box-pack: justify;
+    -webkit-font-smoothing: antialiased;
+}
+
+.nav-item {
+    margin: 0px;
+    padding: 0px;   
+    vertical-align: top;
+    z-index: 1;
+    letter-spacing: normal;
+}
+
+.nav-link {
+    color: rgb(245, 245, 247);
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: -0.14px;
+    outline-offset: -7px;
+    text-decoration-line: none;
+}
+
+.nav-link-logo {
+    background-image: url("../assets/ap-globalnav_apple_image__cxwwnrj0urau_large.svg");
+    background-position-x: 50%;
+    background-position-y: calc(50% - 8px);
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    padding: 0px 10px;
+    width: 16px;
+    height: 44px;
+    opacity: 0.8;
+}
+
+.nav-link-search {
+    padding: 0px 10px;
+    background-image: url("../assets/ap-globalnav_search_image__fca9mfoh8a2q_large.svg");
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-size: 18px 88px;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position-x: 10px;
+    background-position-y: -8px;
+    width: 18px;
+    height: 44px;
+}
+
+.nav-link-bag {
+    background-image: url("../assets/ap-globalnav_bag_image__bmix8075eg4i_large.svg");
+    background-repeat: no-repeat;
+    background-size: 17px 44px;
+    background-position-x: 50%;
+    background-position-y: calc(50% - 8px);
+    width: 17px;
+    height: 44px;
+}
+
+.cta-list {
+    display: block;
+    letter-spacing: 0.228px;
+    font-size: 19px;
+    line-height: 23px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    padding: 0px;
+    margin-block-start: 11px;
+    margin-block-end: 0px;
+}
+
+.cta-item {
+    display: inline-block;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0px 9px;
+ }
+
+.cta-item-copy:hover {
+    text-decoration-line: underline;
+}
+
+.card {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.ap-content {
+    text-align: center;
+    display: flex;
+}
+
+
+.chevronright::after {
+    content: " >";
+    font-family: "San Francisco Icons", "San Francisco", -apple-system, BlinkMacSystemFont, sans-serif;
+    text-decoration-line: none;
+    z-index: 100;
+}
+
+.footer {
+    font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: rgb(29,29,31);
+}
+
+.footer-nav {
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 980px;
+    padding: 0px 22px;
+    font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
+    color:rgb(245, 245, 247);
+}
+
+.footer-nav-group {
+    background-color: transparent;
+    flex-basis: 25%;
+    color:rgb(245, 245, 247);
+    border: none;
+    font-size: 13px;
+    margin-right: 20px;
+    padding-top: 24px;
+    font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
+    text-align: left;
+}
+
+.footer-shop-legal-container {
+    padding: 34px 0px 21px 0px;
+}
+
+.footer-shop-content {
+    color: rgb(110, 110, 115);
+    padding: 0px;
+    margin: 0px;
+}
+
+.pipeleft {
+    display: inline-block;
+    padding: 0px 5px; 
+    border-right: 1px solid rgb(110,110,115);
+}
+
+.piperight {
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+.footer-nav-title {
+    font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    color:rgb(245, 245, 247);
+    padding: 5px;
+    margin-bottom: 0.8em;
+}
+
+button.footer-nav-title {
+    background-color: transparent;
+    border: none;
+    padding: 10px 0px 5px 0px;
+    margin: 0px 0px 0.8em 0px;
+    color: rgb(245, 245, 247);
+}
+
+.footer-nav-child {
+    font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
+    margin-bottom: 0.8em;
+    line-height: 16px;
+    color: rgb(161, 161, 166);
+    font-size: 13px;
+    letter-spacing: normal;
+}
+
+a.footer-nav-child {
+    color: rgb(161, 161, 166);
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0px;
+    letter-spacing: normal;
+}
+
+a.footer-nav-child:hover {
+    color: rgb(245, 245, 247);
+    text-decoration-line: underline;
+}
+
+.footer-shop {
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid rgb(66,66,69);
+    color: rgb(110, 110, 115);
+    font-size: 12px;
+    margin: 0px auto 7px auto;
+    padding: 0px 22px 8px 22px;
+    width: 980px;
+}
+.footer-legal {
+    display: flex;
+    flex-wrap: nowrap;
+    color: rgb(110, 110, 115);
+    font-size: 12px;
+    margin: 0px auto 7px auto;
+    padding: 0px 22px 8px 22px;
+    width: 980px;
+}
+
+.footer-legal-left {
+    flex-basis: 40%;
+}
+
+.footer-legal-center {
+    flex-basis: 60%;
+    text-align: center;
+}
+
+.footer-legal-right {
+    flex-basis: 25%;
+    text-align: right;
+}
+
+.not-visible {
+    height: 1px;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.iphone-takeover {
+    background-color: rgb(245, 245, 247);
+}
+
+@media only screen and (max-width: 319px) {
+
+}
+
+
+@media only screen and (max-width: 734px) {
+
+}
+
+
+@media only screen and (max-width: 1068px) {
+
+}
+
+@media only screen and (max-height: 700px) {
+
+    .section-content {
+        height: calc(100vh - 48px);
+        min-height: 800px;
+    }
+    
+    .headline-wrapper {
+        display: block;
+        flex-shrink: 0;
+        margin: 0px auto;
+        padding: 112px 0px;
+        text-align: center;
+    }
+
+    .copy-container {
+        align-items: center;
+        margin: 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        width: 980px;
+        flex-shrink:0;
+        min-height: 350px;
+        text-align: center;
+    }
+    
+    .sticky-content {
+        position: sticky;
+    }
+
+    .sticky-padding {
+        height: 300px;
+        display: block;
+        background-color: #f5f5f7;
+    }
+    
+}
