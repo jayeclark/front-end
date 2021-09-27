@@ -319,9 +319,87 @@ h3 {
 .card-subtitle {
     padding: 0px;
     font-weight:normal;
-    font-size: 14px;
+    font-size: 13.5px;
 }
 
 .col-4 .card-subtitle {
     font-size: normal;
+}
+
+.footer-section {
+    background-color: rgb(247,247,247);
+    border-top: 1px solid rgb(221,221,221);
+    display: block;
+    padding: 0px 80px;
+    margin-top: 40px;
+    font-size: 13.5px;
+    color: rgb(72,72,72);
+}
+
+.footer-nav {
+    padding: 40px 0px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 16px;
+}
+
+.footer-legal {
+    border-top: 1px solid rgb(221,221,221);
+    padding: 24px 0px;
+    display: flex;
+    width: 100%;
+}
+
+.footer-legal-left {
+    text-align: left;
+    flex-basis: 50%;
+}
+
+.footer-legal-right {
+    text-align: right;
+    flex-basis: 50%;
+}
+
+.footer-nav-group {
+    flex-basis: 25%;
+    min-width: 200px;
+    padding: 0px;
+}
+
+.collapsible-list {
+    width: 100%;
+    display:inline-block;
+    list-style: none;
+    padding: 8px;
+    margin: 0px;
+}
+
+.collapsible-list-item {
+    display: inline-block;
+    padding: 0px 10px;
+    margin: auto 0px;
+    font-size: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.airbnb p {
+    display: block;
+}
+
+a {
+    color: #222;
+    text-decoration-line: none;
+}
+
+a:hover {
+    color: #222;
+    text-decoration-line: underline;
+}
+
+h5 {
+    font-size:0.9em;
+    text-transform: uppercase;
 }
