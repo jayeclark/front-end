@@ -1,0 +1,71 @@
+@font-face {
+    font-family: Circular;
+    font-weight: 900;
+    src: url('ab-CerealBlack.woff');
+}
+
+@font-face {
+    font-family: Circular;
+    font-weight: 800;
+    src: url('ab-CerealExtraBold.woff');
+}
+
+@font-face {
+    font-family: Circular;
+    font-weight: 600 700;
+    src: url('ab-CerealBold.woff');
+}
+
+@font-face {
+    font-family: Circular;
+    font-weight: 500;
+    src: url('ab-CerealMedium.woff');
+}
+
+@font-face {
+    font-family: Circular;
+    font-weight: 400;
+    src: url('ab-CerealBook.woff');
+}
+
+@font-face {
+    font-family: Circular;
+    font-weight: 100 300;
+    src: url('ab-CerealLight.woff');
+}
+
+
+.airbnb {
+    font-family: Circular, Arial, Helvetica, sans-serif;
+}
+
+.dynamic-row {
+    width: 100%;
+    display: block;
+    box-sizing: content-box;
+    min-height: 64px;
+    max-height: 400px;
+}
+
+.card-container {
+    min-width: 25%;
+}
+
+.card-image {
+    min-height: 64px;
+    overflow: hidden;
+    padding: 8px;
+}
+
+.card-label {
+    text-align: left;
+    padding: 8px;
+}
+
+.card-title {
+    padding: 0px;
+}
+
+.card-subtitle {
+    padding: 0px;
+}
