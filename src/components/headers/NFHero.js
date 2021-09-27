@@ -19,7 +19,7 @@ export function Hero() {
                     <option lang="es" value="es">Español</option>
                   </select>
                 </div>
-                <div>
+                <div className="btn-container">
                   <button className="btn">Sign In</button>
                 </div>
                 

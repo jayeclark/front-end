@@ -26,6 +26,9 @@ code {
   height: auto;
   z-index: 99998;
   font-size: 13px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 /* Navbar links */
@@ -42,6 +45,7 @@ code {
 /* Page content */
 .main-content {
   display: block;
+  margin-top: -2px;
 }
 
 .main-content.invisible {
