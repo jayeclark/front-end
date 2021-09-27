@@ -39,33 +39,76 @@
     font-family: Circular, Arial, Helvetica, sans-serif;
 }
 
-.dynamic-row {
+.dynamic-row-container {
     width: 100%;
     display: block;
     box-sizing: content-box;
     min-height: 64px;
     max-height: 400px;
+    padding: 20px 0px;
+}
+
+.dynamic-row-content-container {
+    margin: 0px 45px;
+    padding: 0px;
+}
+
+.dynamic-row-content {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.dynamic-row-header {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-width: 100%;
 }
 
 .card-container {
     min-width: 25%;
+    display: flex;
+    flex-basis: 25%;
+    flex-wrap: nowrap;
+}
+
+.card-image-container {
+    min-height: 64px;
+    overflow-y: hidden;
+    display: flex;
+    padding: 8px;
+    flex-shrink: 4;
 }
 
 .card-image {
-    min-height: 64px;
-    overflow: hidden;
-    padding: 8px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.card-image-img {
+    border-radius: 16px;
+    width: 100%;
+    height: auto;
 }
 
 .card-label {
     text-align: left;
     padding: 8px;
+    flex-shrink: 0;
+    min-width: 60%;
+    width: auto;
 }
 
 .card-title {
     padding: 0px;
+    font-weight: bold;
 }
 
 .card-subtitle {
     padding: 0px;
+    font-weight:normal;
 }
