@@ -49,9 +49,21 @@ body {
     display: block;
 }
 
+h1 {
+    font-size: 3em;
+    padding: 8px 0px;
+    margin: 0px;
+}
+
 h2 {
     font-size: 2em;
     font-weight: 600;
+    padding: 0px;
+    margin: 0px;
+}
+
+h3 {
+    font-weight: 400;
     padding: 0px;
     margin: 0px;
 }
@@ -119,6 +131,23 @@ h2 {
     display: flex;
 }
 
+.regular-cta-button {
+    height:48px; 
+    position: relative; 
+    border-radius: 8px;
+    width: 140px; 
+    background-color:white;
+    color: #222;
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: auto 0px;
+    display: flex;
+    font-weight: 500;
+    margin: 40px 0px;
+}
+
 .hero-cta-button-text {
     margin: auto;
     font-weight: bold;
@@ -153,11 +182,11 @@ h2 {
     box-sizing: content-box;
     min-height: 64px;
     max-height: 400px;
-    padding: 16px 0px;
+    padding: 16px 0px 22px 0px;
 }
 
 .dynamic-row-content-container {
-    margin: 0px 65px;
+    margin: 0px 80px;
     padding: 0px;
 }
 
@@ -186,19 +215,37 @@ h2 {
     gap: 16px;
 }
 
+.dynamic-row-cards.col-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+    padding: 8px;
+    gap: 16px;
+}
+
+
 .card-container {
     min-width: 25%;
     display: flex;
     flex-basis: 25%;
+    flex-wrap: wrap;
+    display: relative;
+    box-sizing: border-box;
+}
+
+.card-container.nowrap {
     flex-wrap: nowrap;
 }
 
 .card-image-container {
     min-height: 64px;
     min-width: 64px;
-    overflow-y: hidden;
     display: flex;
     padding: 8px 0px;
+    align-items: center;
+}
+
+.shrink {
     flex-shrink: 4;
 }
 
@@ -206,22 +253,56 @@ h2 {
     padding: 0px;
     height: 100%;
     width: 100%;
+    border-radius: 8px;
 }
 
 .card-image-img {
-    border-radius: 8px;
+    border-radius: 16px;
     width: 100%;
     height: auto;
+}
+
+.card-image-img-wide {
+    border-radius: 16px;
+}
+
+.col-4 .card-image-img,
+.col-3 .card-image-img {
+    border-radius: 8px;
+}
+
+.card-image-overlay-container {
+    position: absolute;
+    height: 100%;
+    flex-grow: 1;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image-overlay-left {
+    padding: 80px 33% 80px 80px;
+}
+
+.card-image-overlay-right {
+    padding: 80px 80px 80px 33%;
 }
 
 .card-label {
     text-align: left;
     margin: auto 0px;
-    padding: 8px 16px;
+    padding: 0px;
     flex-shrink: 1;
     min-width: 63%;
     display: flex;
     flex-wrap: wrap;
+    font-size: 18px;
+}
+
+.nowrap .card-label {
+    padding: 8px 16px;
+    font-size: normal;
 }
 
 .card-title {
@@ -238,4 +319,9 @@ h2 {
 .card-subtitle {
     padding: 0px;
     font-weight:normal;
+    font-size: 14px;
+}
+
+.col-4 .card-subtitle {
+    font-size: normal;
 }
