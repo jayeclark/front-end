@@ -45,8 +45,20 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.airbnb .transparent {
+    color: white;
+}
+
+.main-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
 .airbnb-content {
     display: block;
+    position: relative;
 }
 
 h1 {
@@ -69,69 +81,244 @@ h3 {
 }
 
 nav .globalnav {
-    background-color: white;
+    background-color: transparent;
     position: fixed;
-    height: 95px;
-    min-height: 95px;
-    z-index: 9999;
+    height: 96px;
+    min-height: 96px;
+    z-index: 999;
     top: 44px;
     width: 100%;
     box-sizing: border-box;
 }
 
 nav .nav-items-container {
+    background-color: white;
     position: relative;
     box-sizing: border-box;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 15px 70px 15px 70px;
+    padding: 15px 80px;
+    z-index: 999;
+    color: #666;
+}
+
+nav .nav-brand-and-account-container {
+    display: block;
+    z-index:9999;
+    height: 80px;
+    min-height: 80px;
+}
+
+nav .nav-search-container {
+    position: relative;
+    display: flex;
+    top: -95px;
+    min-height: 95px;
+    color: inherit;
 }
 
 nav .globalnav-brand {
     text-align: left;
     min-width: 150px;
-    width: 33%;
-    flex-basis: 30%;
+    width: 25%;
     color: rgb(255,56,92);
     margin: auto 0px;
-    padding: 10px;
-    flex-shrink: 1;
-    flex-grow: 1;
+    padding: 5px;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
+
+nav.transparent .globalnav-brand {
+    color: white;
+}
+
+nav .globalnav-search-form {
+    top: -80px;
+    color: #222;
+}
+
+nav.transparent .globalnav-search-form {
+    color: white;
+} 
 
 nav .globalnav-search {
     text-align: center;
+    display: block;
+    z-index: 999;
+    align-content: center;
     min-width: 250px;
-    width: 33%;
-    flex-basis: 33%;
+    width: 100%;
 }
 
 nav .globalnav-account {
-    width: 33%;
+    width: 50%;
     min-width: 250px;
-    flex-basis: 33%;
     display: flex;
     justify-content: right;
     justify-items: right;
+    flex-grow: 1;
 }
 
-nav .globalnav.transparent {
+nav.transparent .nav-items-container {
     background-color: transparent;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0));
+    color: white;
 }
 
 .search-bar-button {
     width: 284px;
     height: 32px;
-    top: 44px;
     border-radius: 24px;
     border: 1px solid #ddd;
     box-shadow: 0px 2px 8px rgba(204, 204, 204,0.6);
     padding: 8px;
-    margin: auto;
+    margin: 16px auto;
     display: flex;
     box-sizing: content-box;
     right: 0px;
+    top: 16px;
+    position: relative;
+    background-color: white;
+    z-index: 99999;
+}
+
+.search-bar-button.hidden {
+    display: none;
+}
+
+.search-nav {
+    display: flex;
+    flex-shrink: 0;
+    width: 50%;
+    position: relative;
+    margin: auto;
+}
+
+.search-nav-item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 0px 16px;
+    display: inline-block;
+}
+
+.search-nav-item.active::after {
+    content: " ";
+    display: block;
+    width: 18px;
+    margin: 8px auto;
+    height: 2px;
+    border-radius: 1px;
+    background-color: white;
+}
+
+nav .transparent .search-nav-item {
+    color: white;
+}
+
+.search-bar-form {
+    flex-shrink: 0;
+    max-width: 850px;
+    width: 100%;
+    height: 68px;
+    border-radius: 34px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 8px rgba(204, 204, 204,0.6);
+    margin: 16px auto;
+    box-sizing: content-box;
+    right: 0px;
+    background-color: white;
+    z-index: 99999;
+    position: relative;
+    color: #666;
+    align-content: center;
+    overflow: hidden;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    width: 100%;
+    text-align: left;
+    justify-items:auto;
+}
+
+.flexible-input {
+    background-color: transparent;
+    flex-grow: 2;
+    flex-shrink: 1;
+    min-width: 150px;
+    width: 100%;
+    border: none;
+}
+
+.flexible-input.date {
+    min-width: 80px;
+}
+
+.flexible-input:focus {
+    outline: none;
+}
+
+.input-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: left;
+    padding: 0px 8px;
+    border-radius: 34px;
+}
+
+.input-container:hover {
+    background-color: #eee;
+}
+
+.input-container:focus-within {
+    background-color: white;
+    box-shadow: rgba(217, 217, 217, 1) 2px 0px 8px 4px;
+    z-index: 999999;
+}
+
+.dividing-line {
+    width: 1px;
+    height: 30px;
+    margin: auto 0px;
+    border-right: 1px solid #ccc;
+    flex-grow: 0;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.input-container.stretchy {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.input-container.shrinky {
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.field-lockup {
+    padding: 16px 8px;
+}
+
+.tab-start {
+    padding-left: 16px;
+}
+
+.input-label {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    width: 100%;
+    flex-shrink: 0;
+    color: #222;
+    margin: 0px 3px;
+    letter-spacing: 0.5px;
 }
 
 .search-button {
@@ -141,6 +328,30 @@ nav .globalnav.transparent {
     background-color: rgb(255,56,92);
     flex-grow: 0;
     flex-shrink: 0;
+}
+
+.search-button-large {
+    border-radius: 26px;
+    height: 52px;
+    width: auto;
+    max-width: 100px;
+    background-color: rgb(255,56,92);
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    align-content: center;
+    justify-content: stretch;
+    flex-wrap: nowrap;
+    padding: 0px 12px;
+    margin: 8px 0px;
+}
+
+.search-button-large-content {
+    margin: auto 0px;
+    color: white;
+    padding: 0px 4px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .search-bar.expanded {
@@ -155,15 +366,20 @@ nav .globalnav.transparent {
     text-align: right;
     font-size: 14px;
     font-weight: 500;
-    color: #222;
 }
 
 .language-area {
-    color: #222;
     flex-grow: 0;
     flex-shrink: 0;
     margin: auto 20px;
 }
+
+
+nav .transparent .cta-area,
+nav .transparent .language-area {
+    color: white;
+}
+
 
 .account-area {
     flex-grow: 0;
@@ -202,6 +418,8 @@ nav .globalnav.transparent {
     border: 1px solid #ddd;
     border-radius: 20px;
     margin: auto 0px;
+    background-color: white;
+    color: #222;
 }
 
 .account-menu-container {
