@@ -299,16 +299,24 @@ button:hover {
     padding: 0.5rem 0px;
 }
 
+.btn-container {
+    box-sizing: border-box;
+    padding: 0px;
+    background-color: transparent;
+    margin: auto 0px;
+}
+
 .btn {
     box-sizing: border-box;
     padding: 7px 17px;
     border-radius: 2px;
     font-size: 1rem;
-    height: auto;
+    height: 40px;
 }
 
 .btn-large {
     font-size: 1rem;
+    height: 60px;
 }
 
 
@@ -641,7 +649,7 @@ input::placeholder {
         padding: 7px 17px;
         border-radius: 2px;
         font-size: 1rem;
-        height: 60px;
+        height: 40px;
     }
 
     .textfield {
@@ -658,7 +666,6 @@ input::placeholder {
     button {
         border-bottom-left-radius: 0px;
         border-top-left-radius: 0px;
-        min-height: 60px!important;
     }
 
     .row {
