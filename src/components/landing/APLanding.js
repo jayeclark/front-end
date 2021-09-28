@@ -1,4 +1,4 @@
-import Nav from '../nav/APGlobalNav.js';
+import APNav from '../nav/APGlobalNav.js';
 import Hero from '../headers/APHero.js';
 import Footer from '../footers/APFooter.js';
 import Ap_iPhone13ProLogoSmall from '../../assets/ap-iphone_13_pro_logo__dx3ikh4nlf0i_small.png';
@@ -109,7 +109,7 @@ export function Landing() {
   return (
     <>
     <nav>
-      <Nav></Nav>
+      <APNav></APNav>
     </nav>
     <div className="main">
       {heroes.map((hero,i)=>

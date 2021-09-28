@@ -259,6 +259,10 @@ nav {
     text-decoration-line: none;
 }
 
+.nav-link:hover {
+    text-decoration-line: underline;
+}
+
 .nav-link-logo {
     background-image: url("../assets/ap-globalnav_apple_image__cxwwnrj0urau_large.svg");
     background-position-x: 50%;

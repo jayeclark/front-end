@@ -72,6 +72,7 @@ h2 {
     font-weight: 600;
     padding: 0px;
     margin: 0px;
+    text-align: left;
 }
 
 h3 {
@@ -607,7 +608,12 @@ nav .transparent .language-area {
     flex-wrap: nowrap;
 }
 
+.card-container.wrap {
+    flex-wrap: wrap;
+}
+
 .card-image-container {
+    width: 100%;
     min-height: 64px;
     min-width: 64px;
     display: flex;
@@ -617,6 +623,10 @@ nav .transparent .language-area {
 
 .shrink {
     flex-shrink: 4;
+}
+
+.no-shrink {
+    flex-wrap: wrap;
 }
 
 .card-image {
@@ -704,6 +714,7 @@ nav .transparent .language-area {
     margin-top: 40px;
     font-size: 13.5px;
     color: rgb(72,72,72);
+    text-align: left;
 }
 
 .footer-nav {
@@ -753,6 +764,7 @@ nav .transparent .language-area {
     line-height: 16px;
     vertical-align: middle;
     align-items: center;
+    text-align: left;
 }
 
 .airbnb p {

@@ -1,5 +1,5 @@
 
-export function Nav() {
+export function ABNav() {
 
     const menuItems = [
         {name: 'logo', content: '', addlClass: 'nav-link-logo'},
@@ -34,4 +34,4 @@ function NavItem({name, content, addlClass}) {
     )
 }
 
-export default Nav;
+export default ABNav;

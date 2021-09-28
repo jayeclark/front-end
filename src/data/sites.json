@@ -6,5 +6,9 @@
     "ap": {
         "title": "Apple",
         "metaDescription": "Meet our most powerful lineup ever: iPhone&nbsp;13, iPhone&nbsp;13&nbsp;mini, iPhone&nbsp;13&nbsp;Pro, and iPhone&nbsp;13&nbsp;Pro&nbsp;Max. Available&nbsp;now."
+    },
+    "ab": {
+        "title": "Airbnb",
+        "metaDescription": "Find vacation rentals, cabins, beach houses, unique homes and experiences around the world - all made possible by hosts on Airbnb."
     }
 }
