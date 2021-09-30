@@ -54,6 +54,7 @@ body {
     top: 0px;
     left: 0px;
     z-index: 0;
+    padding-top: 44px;
 }
 
 .airbnb-content {
@@ -81,7 +82,7 @@ h3 {
     margin: 0px;
 }
 
-nav .globalnav {
+.globalnav {
     background-color: transparent;
     position: fixed;
     height: 96px;
@@ -115,7 +116,7 @@ nav .nav-brand-and-account-container {
 nav .nav-search-container {
     position: relative;
     display: flex;
-    top: -95px;
+    top: -80px;
     min-height: 95px;
     color: inherit;
 }
@@ -175,7 +176,7 @@ nav.transparent .nav-items-container {
     border: 1px solid #ddd;
     box-shadow: 0px 2px 8px rgba(204, 204, 204,0.6);
     padding: 8px;
-    margin: 16px auto;
+    margin: 0px auto;
     display: flex;
     box-sizing: content-box;
     right: 0px;
@@ -462,7 +463,7 @@ nav .transparent .language-area {
     position: relative;
     top: 0px;
     left: 0px;
-    height: 550px;
+    height: calc(max(550px,0.85vh));
     color: white;
 }
 
