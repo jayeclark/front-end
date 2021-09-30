@@ -528,6 +528,15 @@ nav .transparent .language-area {
     font-weight: bold;
 }
 
+.slogan-container {
+    height:100%;
+    display:block;
+    z-index:99;
+    position:relative;
+    width:100%;
+}
+
+
 .gradient-text {
     background: -webkit-linear-gradient(1turn, rgb(87, 13, 122), rgb(180, 26, 159));
     background-clip:content-box;

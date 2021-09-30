@@ -22,7 +22,7 @@ export function Hero() {
                   <img className="cellphone hero-img" aria-hidden="true" alt="" src={bgT720} />
                 </picture>
               </div> 
-              <div style={{height:'100%',display:'block',zIndex:'99',position:'relative',width:'100%'}}>
+              <div className="slogan-container">
                 <div style={{display:'flex',alignItems:'center',height:'100%',width:'100%'}}>
                   <div style={{margin:'0px auto', padding: '186px 80px 40px 80px', display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                     <div style={{color:'#333',width:'100%',fontSize:'18px',fontWeight:'500',padding:'16px', textAlign:'center'}}>
