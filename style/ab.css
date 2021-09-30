@@ -50,11 +50,10 @@ body {
 }
 
 .main-container {
-    position: absolute;
+    position: relative;
     top: 0px;
     left: 0px;
     z-index: 0;
-    padding-top: 44px;
 }
 
 .airbnb-content {
@@ -90,7 +89,6 @@ h3 {
     z-index: 999;
     top: 44px;
     width: 100%;
-    box-sizing: border-box;
 }
 
 nav .nav-items-container {
@@ -101,16 +99,18 @@ nav .nav-items-container {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 15px 80px;
+    padding: 15px calc(min(80px,max(5vw,30px)));
     z-index: 999;
     color: #666;
 }
 
 nav .nav-brand-and-account-container {
     display: block;
+    box-sizing: border-box;
     z-index:9999;
     height: 80px;
     min-height: 80px;
+    width: 100%;
 }
 
 nav .nav-search-container {
@@ -118,6 +118,7 @@ nav .nav-search-container {
     display: flex;
     top: -80px;
     min-height: 95px;
+    height: fit-content;
     color: inherit;
 }
 
@@ -190,16 +191,36 @@ nav.transparent .nav-items-container {
     display: none;
 }
 
+.search-bar-button-field {
+    margin: auto 15px;
+    color:#333;
+    flex-grow: 1;
+    text-align:left;
+    font-size:14px;
+    font-weight:500;
+}
+
+.search-large-container {
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    margin: 0px auto;
+    z-index:999999;
+    position:relative;
+    top:30px;
+}
+
 .search-nav {
     display: flex;
+    justify-content: center;
     flex-shrink: 0;
-    width: 50%;
+    width: 70%;
     position: relative;
     margin: auto;
 }
 
 .search-nav-item {
-    flex-grow: 1;
+    flex-grow: 0;
     flex-shrink: 1;
     padding: 0px 16px;
     display: inline-block;
@@ -219,16 +240,17 @@ nav .transparent .search-nav-item {
     color: white;
 }
 
-.search-bar-form {
+.search-bar-form-container {
     flex-shrink: 0;
     max-width: 850px;
-    width: 100%;
+    min-width: 665px;
+    width: 70%;
     height: 68px;
     border-radius: 34px;
     border: 1px solid #ddd;
     box-shadow: 0px 2px 8px rgba(204, 204, 204,0.6);
     margin: 16px auto;
-    box-sizing: content-box;
+    box-sizing: border-box;
     right: 0px;
     background-color: white;
     z-index: 99999;
@@ -236,6 +258,12 @@ nav .transparent .search-nav-item {
     color: #666;
     align-content: center;
     overflow: hidden;
+}
+
+.search-bar-form {
+    margin: 0px;
+    display: block;
+    height: 68px;
 }
 
 .form-container {
@@ -251,7 +279,7 @@ nav .transparent .search-nav-item {
     background-color: transparent;
     flex-grow: 2;
     flex-shrink: 1;
-    min-width: 150px;
+    min-width: min-content;
     width: 100%;
     border: none;
 }
@@ -305,6 +333,8 @@ nav .transparent .search-nav-item {
 
 .field-lockup {
     padding: 16px 8px;
+    box-sizing: content-box;
+    min-width: min-content;
 }
 
 .tab-start {
@@ -457,13 +487,14 @@ nav .transparent .language-area {
     display: block;
     position: relative;
     width: 100%;
+    max-width: 100%;
 }
 
 .hero-content {
     position: relative;
     top: 0px;
     left: 0px;
-    height: calc(max(550px,0.85vh));
+    min-height: calc(max(550px, 85vh + 44px));
     color: white;
 }
 
@@ -474,12 +505,13 @@ nav .transparent .language-area {
 }
 
 .hero-img {
-    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
     bottom: 0px;
     z-index: 1;
     position:absolute;
-    left:0;
-    right:0;
+    left:50%;
+    transform: translateX(-50%);
     object-fit:cover;
     object-position:center bottom;
     vertical-align:bottom;
@@ -501,6 +533,7 @@ nav .transparent .language-area {
     text-align: center;
     padding: auto 0px;
     display: flex;
+    margin: 0px auto;
 }
 
 .regular-cta-button {
@@ -525,6 +558,29 @@ nav .transparent .language-area {
     font-weight: bold;
 }
 
+.slogan-container {
+    height: calc(max(550px, 85vh + 44px));
+    display:block;
+    z-index:99;
+    position:relative;
+    width:100%;
+}
+
+.slogan-flex-container {
+    display:flex;
+    align-items:center;
+    height: 100%;
+    width: 100%;
+}
+
+.slogan-lockup {
+    margin: 0px auto;
+    padding: 226px 80px 40px 80px; 
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .gradient-text {
     background: -webkit-linear-gradient(1turn, rgb(87, 13, 122), rgb(180, 26, 159));
     background-clip:content-box;
@@ -539,6 +595,7 @@ nav .transparent .language-area {
     width: 100%;
     height: 100%;
     overflow-y: hidden;
+    overflow-x: hidden;
     vertical-align: bottom;
     z-index: 0;
 }
@@ -558,8 +615,9 @@ nav .transparent .language-area {
 }
 
 .dynamic-row-content-container {
-    margin: 0px 80px;
+    margin: 0px calc(min(80px,max(5vw,30px)));
     padding: 0px;
+    overflow-x: scroll;
 }
 
 .dynamic-row-content {
@@ -567,6 +625,7 @@ nav .transparent .language-area {
     padding: 0px;
     display: flex;
     max-width: 100%;
+    min-width: 750px;
     flex-wrap: wrap;
 }
 
@@ -711,7 +770,7 @@ nav .transparent .language-area {
     background-color: rgb(247,247,247);
     border-top: 1px solid rgb(221,221,221);
     display: block;
-    padding: 0px 80px;
+    padding: 0px calc(min(80px,max(5vw,30px)));
     margin-top: 40px;
     font-size: 13.5px;
     color: rgb(72,72,72);
@@ -785,4 +844,35 @@ a:hover {
 h5 {
     font-size:0.9em;
     text-transform: uppercase;
+}
+
+@media only screen and (max-width:1128px) {
+
+    .search-nav-item {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+}
+
+@media only screen and (max-width:950px) and (min-width:744px) {
+ 
+    nav .nav-search-container {
+        top: -16px;
+    }
+
+    .search-nav-item {
+        font-size: normal;
+        font-weight: normal;
+    }
+}
+
+@media only screen and (max-width:744px) {
+    .nav-brand-and-account-container {
+        visibility: hidden;
+    }
+
+    .globalnav-search {
+        visibility: hidden;
+    }
 }
