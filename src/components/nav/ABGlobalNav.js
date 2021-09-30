@@ -1,5 +1,39 @@
 import abProfile from "../../assets/ab-profile.jpg";
 
+function expandSearch() {
+
+  var smNavbar = document.getElementById("ab-search-small");
+  var lgNavbar = document.getElementById("ab-search-large");
+  var lgNav = document.getElementById("ab-search-nav");
+  var lgContainer = document.getElementById("ab-search-form-container");
+  var lgForm = document.getElementById("ab-search-form-large");
+
+  smNavbar.classList.add('hidden');
+  lgNavbar.classList.remove('hidden');
+  lgNav.style.display = 'flex';
+  lgContainer.style.display = 'flex';
+  lgForm.style.display = 'block';
+
+}
+
+function collapseSearch() {
+
+  if (window.scrollY > 5) {
+    var smNavbar = document.getElementById("ab-search-small");
+    var lgNavbar = document.getElementById("ab-search-large");
+    var lgNav = document.getElementById("ab-search-nav");
+    var lgContainer = document.getElementById("ab-search-form-container");
+    var lgForm = document.getElementById("ab-search-form-large");
+  
+    smNavbar.classList.remove('hidden');
+    lgNavbar.classList.add('hidden');
+    lgNav.style.display = 'none';
+    lgContainer.style.display = 'none';
+    lgForm.style.display = 'none';
+  }
+
+}
+
 export function ABNav() {
 
     return (
@@ -39,7 +73,7 @@ export function ABNav() {
         <div className="nav-search-container">
   
           <div className="globalnav-search">
-            <div id="ab-search-small" className="search-bar-button hidden">
+            <div id="ab-search-small" className="search-bar-button hidden" onClick={expandSearch}>
               <div style={{margin: 'auto 15px',color:'#333',flexGrow: 1,textAlign:'left',fontSize:'14px',fontWeight:500}}>Start your search</div>
               <div className="search-button">
                 <div style={{position: 'relative', width: '12px', overflow: 'hidden', color: 'white', top: '50%', left: '50%', transform: 'translateY(-50%) translateX(-50%)'}}>
@@ -47,7 +81,7 @@ export function ABNav() {
                 </div>
               </div>
             </div>
-            <div id="ab-search-large" style={{display:'flex',flexWrap:'wrap',width:'70%',margin: '0px auto', zIndex:'999999',position:'relative',top:'40px'}}>
+            <div id="ab-search-large" style={{display:'flex',flexWrap:'wrap',width:'70%',margin: '0px auto', zIndex:'999999',position:'relative',top:'30px'}}>
               <div id="ab-search-nav" className="search-nav">
                 <div className="search-nav-item active">
                   Places to stay
@@ -61,7 +95,7 @@ export function ABNav() {
               </div>
               <div id="ab-search-form-container" className="search-bar-form">
                 <form id="ab-search-form-large" style={{margin: '0px', display: 'block', height: '68px'}}>
-                  <div className="form-container">
+                  <div className="form-container" onBlur={collapseSearch}>
                     <div className="input-container stretchy tab-start" style={{minWidth: '25%'}}>
                       <div className="field-lockup">
                         <label className="input-label" htmlFor="location">Location</label>
