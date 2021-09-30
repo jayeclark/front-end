@@ -74,14 +74,14 @@ export function ABNav() {
   
           <div className="globalnav-search">
             <div id="ab-search-small" className="search-bar-button hidden" onClick={expandSearch}>
-              <div style={{margin: 'auto 15px',color:'#333',flexGrow: 1,textAlign:'left',fontSize:'14px',fontWeight:500}}>Start your search</div>
+              <div className="search-bar-button-field">Start your search</div>
               <div className="search-button">
                 <div style={{position: 'relative', width: '12px', overflow: 'hidden', color: 'white', top: '50%', left: '50%', transform: 'translateY(-50%) translateX(-50%)'}}>
                   <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style={{display: 'block', fill: 'none', height: '12px', width: '12px', stroke: 'currentcolor', strokeWidth: '5.33333', overflow: 'visible'}}><g fill="none"><path d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"></path></g></svg>
                 </div>
               </div>
             </div>
-            <div id="ab-search-large" style={{display:'flex',flexWrap:'wrap',width:'70%',margin: '0px auto', zIndex:'999999',position:'relative',top:'30px'}}>
+            <div id="ab-search-large" className="search-large-container">
               <div id="ab-search-nav" className="search-nav">
                 <div className="search-nav-item active">
                   Places to stay
@@ -93,8 +93,8 @@ export function ABNav() {
                   Online Experiences
                 </div>
               </div>
-              <div id="ab-search-form-container" className="search-bar-form">
-                <form id="ab-search-form-large" style={{margin: '0px', display: 'block', height: '68px'}}>
+              <div id="ab-search-form-container" className="search-bar-form-container">
+                <form id="ab-search-form-large" className="search-bar-form">
                   <div className="form-container" onBlur={collapseSearch}>
                     <div className="input-container stretchy tab-start" style={{minWidth: '25%'}}>
                       <div className="field-lockup">
