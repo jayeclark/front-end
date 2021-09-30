@@ -50,11 +50,10 @@ body {
 }
 
 .main-container {
-    position: absolute;
+    position: relative;
     top: 0px;
     left: 0px;
     z-index: 0;
-    padding-top: 44px;
 }
 
 .airbnb-content {
@@ -90,7 +89,6 @@ h3 {
     z-index: 999;
     top: 44px;
     width: 100%;
-    box-sizing: border-box;
 }
 
 nav .nav-items-container {
@@ -108,9 +106,11 @@ nav .nav-items-container {
 
 nav .nav-brand-and-account-container {
     display: block;
+    box-sizing: border-box;
     z-index:9999;
     height: 80px;
     min-height: 80px;
+    width: 100%;
 }
 
 nav .nav-search-container {
@@ -230,7 +230,7 @@ nav .transparent .search-nav-item {
     border: 1px solid #ddd;
     box-shadow: 0px 2px 8px rgba(204, 204, 204,0.6);
     margin: 16px auto;
-    box-sizing: content-box;
+    box-sizing: border-box;
     right: 0px;
     background-color: white;
     z-index: 99999;
@@ -459,13 +459,14 @@ nav .transparent .language-area {
     display: block;
     position: relative;
     width: 100%;
+    max-width: 100%;
 }
 
 .hero-content {
     position: relative;
     top: 0px;
     left: 0px;
-    min-height: calc(max(550px,0.85vh + 44px));
+    min-height: calc(max(550px, 85vh + 44px));
     color: white;
 }
 
@@ -504,6 +505,7 @@ nav .transparent .language-area {
     text-align: center;
     padding: auto 0px;
     display: flex;
+    margin: 0px auto;
 }
 
 .regular-cta-button {
@@ -529,7 +531,7 @@ nav .transparent .language-area {
 }
 
 .slogan-container {
-    height:100%;
+    height: calc(max(550px, 85vh + 44px));
     display:block;
     z-index:99;
     position:relative;
@@ -541,6 +543,14 @@ nav .transparent .language-area {
     align-items:center;
     height: 100%;
     width: 100%;
+}
+
+.slogan-lockup {
+    margin: 0px auto;
+    padding: 226px 80px 40px 80px; 
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .gradient-text {

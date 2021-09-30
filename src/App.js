@@ -121,7 +121,7 @@ function App() {
 
       <div className="App">
         
-          <div className="header" style={{height:"47px"}}></div>
+          <div className="header" style={{height:"44px"}}></div>
           <div id="main-navbar" className="main-navbar" style={{padding:"0px 5px"}}>
               <a style={{display:"inline-block",margin:"auto 5px"}} href="#ap" id="ap" className="option" onClick={e => handleSetSite(e,'ap')}><div style={{display:"flex"}}><img style={{margin:"-12px 4px",height:'40px'}} src={apLogo} alt="Apple" /><span style={{lineHeight:"normal",fontSize:"12",fontWeight:"bold", fontColor: "#666",fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'"}}>Apple</span></div></a>
               <a style={{display:"inline-block",margin:"auto 5px"}} href="#nf" id="nf" className="option" onClick={e => handleSetSite(e,'nf')}><div style={{display:"flex", height:"18px", margin:"-1px"}}><img height="100%" src={nfLogo} alt="Netflix" /></div></a>
