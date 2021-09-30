@@ -3,7 +3,7 @@ import abProfile from "../../assets/ab-profile.jpg";
 export function ABNav() {
 
     return (
-        <nav className="globalnav transparent">
+        <nav id="ab-nav-container" className="globalnav transparent">
         <div className="nav-brand-and-account-container">
           <div className="nav-items-container">
             <div className="globalnav-brand">
@@ -39,7 +39,7 @@ export function ABNav() {
         <div className="nav-search-container">
   
           <div className="globalnav-search">
-            <div className="search-bar-button hidden">
+            <div id="ab-search-small" className="search-bar-button hidden">
               <div style={{margin: 'auto 15px',color:'#333',flexGrow: 1,textAlign:'left',fontSize:'14px',fontWeight:500}}>Start your search</div>
               <div className="search-button">
                 <div style={{position: 'relative', width: '12px', overflow: 'hidden', color: 'white', top: '50%', left: '50%', transform: 'translateY(-50%) translateX(-50%)'}}>
@@ -47,8 +47,8 @@ export function ABNav() {
                 </div>
               </div>
             </div>
-            <div style={{display:'flex',flexWrap:'wrap',width:'70%',margin: '0px auto', zIndex:'999999',position:'relative',top:'40px'}}>
-              <div className="search-nav">
+            <div id="ab-search-large" style={{display:'flex',flexWrap:'wrap',width:'70%',margin: '0px auto', zIndex:'999999',position:'relative',top:'40px'}}>
+              <div id="ab-search-nav" className="search-nav">
                 <div className="search-nav-item active">
                   Places to stay
                 </div>
@@ -59,8 +59,8 @@ export function ABNav() {
                   Online Experiences
                 </div>
               </div>
-              <div className="search-bar-form">
-                <form style={{margin: '0px', display: 'block', height: '68px'}}>
+              <div id="ab-search-form-container" className="search-bar-form">
+                <form id="ab-search-form-large" style={{margin: '0px', display: 'block', height: '68px'}}>
                   <div className="form-container">
                     <div className="input-container stretchy tab-start" style={{minWidth: '25%'}}>
                       <div className="field-lockup">

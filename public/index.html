@@ -40,6 +40,49 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      window.onscroll = function() {handleScroll()};
 
+      function handleScroll() {
+        var navContainer = document.getElementById("ab-nav-container");
+        var smNavbar = document.getElementById("ab-search-small");
+        var lgNavbar = document.getElementById("ab-search-large");
+        var lgNav = document.getElementById("ab-search-nav");
+        var lgContainer = document.getElementById("ab-search-form-container");
+        var lgForm = document.getElementById("ab-search-form-large");
+
+        if (smNavbar && lgNavbar) {
+          var hero = document.getElementById("ab-hero") 
+          if (window.pageYOffset > 5) {
+            navContainer.classList.remove('transparent');
+            smNavbar.classList.remove('hidden');
+            lgNavbar.classList.add('hidden');
+            lgNav.style.display = 'none';
+            lgContainer.style.display = 'none';
+            lgForm.style.display = 'none';
+          }
+          else {
+            navContainer.classList.add('transparent');
+            smNavbar.classList.add('hidden');
+            lgNavbar.classList.remove('hidden');
+            lgNav.style.display = 'flex';
+            lgContainer.style.display = 'flex';
+            lgForm.style.display = 'block';
+          }
+        }
+
+      }
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
   </body>
 </html>

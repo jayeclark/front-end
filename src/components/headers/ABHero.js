@@ -11,7 +11,7 @@ export function Hero() {
 
      return (
         <section className="hero-section">
-          <div className="hero-container">
+          <div id="ab-hero" className="hero-container">
             <div className="hero-content">
               <div className="background-container">
                 <picture>
