@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState, useRef} from 'react';
+import {useState, useRef, useCallback} from 'react';
 
 export function SignupForm({formName}) {
 
@@ -21,10 +21,15 @@ export function SignupForm({formName}) {
 
     const inputField = formName+'-email';
   
-    function getValue(id, property) {
+    //function getValue(id, property) {
+    //  let tempForm = form.filter(x => x.id === id)[0];
+    //  return tempForm[property];
+    // }
+
+    const getValue = useCallback((id,property)=>{
       let tempForm = form.filter(x => x.id === id)[0];
       return tempForm[property];
-    }
+    },[form])
   
     const handleChange = e => {
       const fields = [...form];
