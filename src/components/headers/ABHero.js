@@ -23,7 +23,7 @@ export function Hero() {
                 </picture>
               </div> 
               <div className="slogan-container">
-                <div style={{display:'flex',alignItems:'center',height:'100%',width:'100%'}}>
+                <div className="slogan-flex-container">
                   <div style={{margin:'0px auto', padding: '186px 80px 40px 80px', display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                     <div style={{color:'#333',width:'100%',fontSize:'18px',fontWeight:'500',padding:'16px', textAlign:'center'}}>
                       Not sure where to go? Perfect.
