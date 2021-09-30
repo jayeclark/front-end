@@ -4,7 +4,7 @@ export function Footer() {
       <section className="footer-section" style={{marginTop:'80px'}}>
       <div className="footer-nav">
         <div id="nav-1" className="footer-nav-group">
-          <p><h5>About</h5></p>
+          <h5>About</h5>
           <p><a href="#nav-1">How Airbnb works</a></p>
           <p><a href="#nav-1">Newsroom</a></p>
           <p><a href="#nav-1">Airbnb 2021</a></p>
@@ -18,8 +18,8 @@ export function Footer() {
           <p><a href="#nav-1">Founders' Letter</a></p>
         </div>
         <div id="nav-2" className="footer-nav-group">
-          <p><h5>Community</h5></p>
-          <p><a href="#nav-2">Diversity & Belonging</a></p>
+          <h5>Community</h5>
+          <p><a href="#nav-2">Diversity &amp; Belonging</a></p>
           <p><a href="#nav-2">Against Discrimination</a></p>
           <p><a href="#nav-2">Accessibility</a></p>
           <p><a href="#nav-2">Airbnb Associates</a></p>
@@ -29,7 +29,7 @@ export function Footer() {
           <p><a href="#nav-2">Airbnb.org</a></p>
         </div>
         <div id="nav-3" className="footer-nav-group">
-          <p><h5>Host</h5></p>
+          <h5>Host</h5>
           <p><a href="#nav-3">Host your home</a></p>
           <p><a href="#nav-3">Host an Online Experience</a></p>
           <p><a href="#nav-3">Host an Experience</a></p>
@@ -39,12 +39,12 @@ export function Footer() {
           <p><a href="#nav-3">Community Center</a></p>
         </div>
         <div id="nav-4" className="footer-nav-group">
-          <p><h5>Support</h5></p>
+          <h5>Support</h5>
           <p><a href="#nav-4">Our COVID-19 Response</a></p>
-          <p><a href="#nav-4">Hekp Center</a></p>
+          <p><a href="#nav-4">Help Center</a></p>
           <p><a href="#nav-4">Cancellation options</a></p>
           <p><a href="#nav-4">Neighborhood Support</a></p>
-          <p><a href="#nav-4">Trust & Safety</a></p>
+          <p><a href="#nav-4">Trust &amp; Safety</a></p>
         </div> 
       </div>
       <div className="footer-legal">
