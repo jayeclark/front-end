@@ -3,6 +3,7 @@ import {Landing} from '../landing/APLanding.js';
 
 function Apple() {
 
+  // eslint-disable-next-line
   const [loggedIn, setLoggedIn] = useState(false);
 
   return (

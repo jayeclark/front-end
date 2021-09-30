@@ -4,6 +4,7 @@ import {Landing} from '../landing/NFLanding.js';
 
 function Netflix() {
 
+  // eslint-disable-next-line
   const [loggedIn, setLoggedIn] = useState(false);
 
   return (
