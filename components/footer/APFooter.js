@@ -1,3 +1,5 @@
+import styles from '../../styles/Apple.module.css';
+
 export function Footer({cols}) {
 
   const sections = [
@@ -75,25 +77,25 @@ export function Footer({cols}) {
     }, [...Array(Number(cols))])
 
     return (
-      <div className="footer">
-        <div className="footer-nav">
+      <div className={styles.footer}>
+        <div className={styles.footerNav}>
           {colArray.map((col,i)=>
             <FooterCol sections={col} key={i} col={i+1}></FooterCol>
           )}
         </div>
-        <section className="footer-shop-legal-container">
-            <div id="footer-shop" className="footer-shop">
-              <div className="footer-shop-content">More ways to shop: <a href="#footer-shop">Find an Apple Store</a> or <a href="#footer-shop">other retailer</a> near you. Or call 1-800-MY-APPLE.</div>
+        <section className={styles.footerShopLegalContainer}>
+            <div id="footer-shop" className={styles.footerShop}>
+              <div className={styles.footerShopContent}>More ways to shop: <a href="#footer-shop">Find an Apple Store</a> or <a href="#footer-shop">other retailer</a> near you. Or call 1-800-MY-APPLE.</div>
             </div>
-            <div id="footer-legal" className="footer-legal">
-              <div className="footer-legal-left">Copyright © 2021 FakeApple Inc. All rights reserved.</div>
-              <div className="footer-legal-center">
-                <a className="footer-nav-child" href="#footer-legal">Privacy Policy</a><span className="pipeleft">&nbsp;</span><span className="piperight">&nbsp;</span>
-                <a className="footer-nav-child" href="#footer-legal">Terms of Use</a><span className="pipeleft">&nbsp;</span><span className="piperight">&nbsp;</span>
-                <a className="footer-nav-child" href="#footer-legal">Sales and Refunds</a><span className="pipeleft">&nbsp;</span><span className="piperight">&nbsp;</span>
-                <a className="footer-nav-child" href="#footer-legal">Legal</a><span className="pipeleft">&nbsp;</span><span className="piperight">&nbsp;</span>
-                <a className="footer-nav-child" href="#footer-legal">Site Map</a></div>
-              <div className="footer-legal-right"><a className="footer-nav-child" href="#footer-legal">United States</a></div>
+            <div id={styles.footerLegal} className={styles.footerLegal}>
+              <div className={styles.footerLegalLeft}>Copyright © 2021 FakeApple Inc. All rights reserved.</div>
+              <div className={styles.footerLegalCenter}>
+                <a className={styles.footerNavChild} href="#footer-legal">Privacy Policy</a><span className={styles.pipeleft}>&nbsp;</span><span className={styles.piperight}>&nbsp;</span>
+                <a className={styles.footerNavChild} href="#footer-legal">Terms of Use</a><span className={styles.pipeleft}>&nbsp;</span><span className={styles.piperight}>&nbsp;</span>
+                <a className={styles.footerNavChild} href="#footer-legal">Sales and Refunds</a><span className={styles.pipeleft}>&nbsp;</span><span className={styles.piperight}>&nbsp;</span>
+                <a className={styles.footerNavChild} href="#footer-legal">Legal</a><span className={styles.pipeleft}>&nbsp;</span><span className={styles.piperight}>&nbsp;</span>
+                <a className={styles.footerNavChild} href="#footer-legal">Site Map</a></div>
+              <div className={styles.footerLegalRight}><a className={styles.footerNavChild} href="#footer-legal">United States</a></div>
             </div>  
           </section>
       </div>
@@ -102,7 +104,7 @@ export function Footer({cols}) {
 
 function FooterCol({sections, col}) {
   return (
-    <div id={"footer-col-"+col} className="footer-nav-group">
+    <div id={"footer-col-"+col} className={styles.footerNavGroup}>
       {sections.map((section,j)=>{
         return (
           <FooterTitle key={j} id={section.hyphenated} title={section.title} items={section.children} col={col}></FooterTitle>
@@ -115,9 +117,9 @@ function FooterCol({sections, col}) {
 function FooterTitle({id,title,items,col}) {
   return (
     <>
-    <button id={id} className="footer-nav-title">{title}</button>
+    <button id={id} className={styles.footerNavTitle}>{title}</button>
     {items.map((item,k)=>
-      <div key={k} className={"footer-nav-child " + id}><a className="footer-nav-child" href={"footer-col-"+col}>{item}</a></div>
+      <div key={k} className={styles.footerNavChild + " " + id}><a className={styles.footerNavChild} href={"footer-col-"+col}>{item}</a></div>
       )}
     </>
   )

@@ -1,0 +1,385 @@
+.sectionContent {
+  height: 1033px;
+  padding-top: 175px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  overflow: hidden;
+}
+
+.copyContainer {
+  text-align: center;
+}
+
+.notVisible {
+  display: none;
+}
+
+.headlineWrapper {
+  margin: none;
+  padding: none;
+}
+
+.headline {
+  text-align: center;
+  margin-top: 0.8em;
+}
+
+.headlineLogo {
+  filter: blur(0.5px);
+}
+
+.stickyPadding {
+  height: 0px;
+  display: block;
+  background-color: #f5f5f7;
+}
+
+.iphone13ProSection {
+  background-color: #f5f5f7;
+}
+
+.iphone13Pro,
+.iphone13 {
+  display: inline-block;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+a.iphone13 {
+  color: rgb(254, 194, 235);
+}
+
+.overviewIphone13ProHero {
+  display: inline-block;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.iphone13ProLarge {
+  height: 237px;
+  width: 793px;
+}
+
+.iphone13ProMedium {
+  display: none;
+}
+
+.iphone13ProSmall {
+  display: none;
+}
+
+
+.iphone13Section {
+  background-color: rgb(53,40,60);
+}
+
+.overviewIphone13Hero {
+  height: 515px;
+  display: block;
+}
+
+.iphone13Large {
+  height: 245px;
+  width: 284px;
+}
+
+.iphone13Medium {
+  display: none;
+}
+
+.iphone13Small {
+  display: none;
+}
+
+
+@media only screen and (max-width: 1068px) {
+  .headlineWrapper {
+      display: none;
+  }
+
+}
+
+@media only screen and (max-height: 700px) {
+  .sectionContent {
+    height: calc(100vh - 48px);
+    min-height: 800px;
+  } 
+
+  .copyContainer {
+    align-items: center;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width: 980px;
+    flex-shrink:0;
+    min-height: 350px;
+    text-align: center;
+  }
+
+  .headlineWrapper {
+    display: block;
+    flex-shrink: 0;
+    margin: 0px auto;
+    text-align: center;
+  }
+
+  .stickyPadding {
+    height: 0px;
+    display: block;
+    background-color: #f5f5f7;
+  }
+}
+
+.linkContainer {
+  padding: 14px 0px;
+  width: 100%;
+  flex-shrink: 0;
+  margin-top: 83px;
+}
+
+.lockupContainer {
+  display: inline-block;
+  max-height: calc(610px - 10vh);
+  position: relative;
+  text-align: center;
+  margin-top: 83px;
+}
+
+/* CTA */
+
+
+.ctaItem {
+  display: inline-block;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin: 0px 9px;
+}
+
+.ctaItemCopy:hover {
+  text-decoration-line: underline;
+}
+
+.ctaList {
+  display: block;
+  letter-spacing: 0.228px;
+  font-size: 19px;
+  line-height: 23px;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  padding: 0px;
+  margin-block-start: 11px;
+  margin-block-end: 0px;
+}
+
+.ctaLinks {
+  margin: 83px 0px 0px 0px;
+  padding: 0px;
+}
+
+.chevronright::after {
+  content: " >";
+  font-family: "San Francisco Icons", "San Francisco", -apple-system, BlinkMacSystemFont, sans-serif;
+  text-decoration-line: none;
+  z-index: 100;
+}
+
+/* NAVIGATION */
+.navLink {
+  color: rgba(245, 245, 247, 0.8)!important;
+  opacity: 0.8!important;
+  padding: 0px 8px;
+}
+
+.navLink:hover {
+  color: rgba(245, 245, 247, 1)!important;
+  opacity: 1!important;
+}
+
+.navContent {
+  margin: auto;
+  padding-left: calc(max(22px, env(safe-area-inset-left)));
+  padding-right: calc(max(22px, env(safe-area-inset-right)));
+  padding-top: 0px;
+  padding-bottom: 0px;
+  max-width: 1040px;
+  z-index: 3;
+  position: relative;
+  pointer-events: auto;
+  text-align:left;
+  align-items: center;
+  height: 100%;
+}
+
+.navLogo {
+  background-image: url("../public/assets/ap-globalnav_apple_image__cxwwnrj0urau_large.svg");
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: 14px 44px;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  transition-delay: 0s;
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  padding: 0px 10px;
+  width: 32px;
+  height: 44px;
+  opacity: 0.8;
+}
+
+.navSearch {
+  padding: 0px 10px;
+  background-image: url("../public/assets/ap-globalnav_search_image__fca9mfoh8a2q_large.svg");
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-size: 13px 88px;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  background-position-x: 50%;
+  background-position-y: -6px;
+  width: 31px;
+  height: 44px;
+}
+
+.navBag {
+    background-image: url("../public/assets/ap-globalnav_bag_image__bmix8075eg4i_large.svg");
+    background-repeat: no-repeat;
+    background-size: 13px 44px;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    width: 31px;
+    height: 44px;
+}
+
+/* FOOTER */
+.footer {
+  font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: rgb(245,245,247);
+  padding-top: 20px;
+}
+
+.footerNav {
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 980px;
+  padding: 0px 22px;
+  font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
+  color:rgb(66, 66, 69);
+}
+
+.footerNavGroup {
+  background-color: transparent;
+  flex-basis: 25%;
+  color:rgb(245, 245, 247);
+  border: none;
+  font-size: 13px;
+  margin-right: 20px;
+  padding-top: 24px;
+  font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: left;
+}
+
+.footerNavTitle {
+  font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  color:rgb(66, 66, 69)!important;
+  padding: 5px;
+  margin-bottom: 0.8em;
+}
+
+button.footerNavTitle {
+  background-color: transparent;
+  border: none;
+  padding: 10px 0px 5px 0px;
+  margin: 0px 0px 0.8em 0px;
+  color: rgb(245, 245, 247);
+}
+
+.footerNavChild {
+  font-family: "San Francisco",-apple-system, BlinkMacSystemFont, sans-serif;
+  margin-bottom: 0.8em;
+  line-height: 16px;
+  color: rgb(66, 66, 69)!important;
+  font-size: 13px;
+  letter-spacing: normal;
+}
+
+a.footerNavChild {
+  color: rgb(66, 66, 69)!important;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0px;
+  letter-spacing: normal;
+}
+
+a.footerNavChild:hover {
+  color: rgb(245, 245, 247);
+  text-decoration-line: underline;
+}
+
+.footerShopLegalContainer {
+  padding: 34px 0px 21px 0px;
+}
+
+.footerShop {
+  display: flex;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid rgb(66,66,69);
+  color: rgb(110, 110, 115);
+  font-size: 12px;
+  margin: 0px auto 7px auto;
+  padding: 0px 0px 8px 0px;
+  width: 980px;
+}
+
+.footerShopContent {
+  color: rgb(110, 110, 115);
+  padding: 0px;
+  margin: 0px;
+}
+
+.footerLegal {
+  display: flex;
+  flex-wrap: nowrap;
+  color: rgb(110, 110, 115);
+  font-size: 12px;
+  margin: 0px auto 7px auto;
+  padding: 0px 0px 8px 0px;
+  width: 980px;
+}
+
+.footerLegalLeft {
+  flex-basis: 40%;
+  text-align: left;
+  font-size: 12px!important;
+}
+
+.footerLegalCenter {
+  flex-basis: 60%;
+  text-align: center;
+}
+
+.footerLegalRight {
+  flex-basis: 25%;
+  text-align: right;
+  font-size: 12px!important;
+}
+
+.pipeleft {
+  display: inline-block;
+  padding: 0px 5px; 
+  border-right: 1px solid rgb(110,110,115);
+}
+
+.piperight {
+  display: inline-block;
+  padding: 0px 5px;
+}
