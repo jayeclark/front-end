@@ -57,28 +57,9 @@ a {
     text-decoration-line: none;
 }
 
-.hero-section {
-    display: block;
-}
-
-.sticky-wrapper {
-    display: block;
-}
-
-.sticky-content {
-    display: block;
-}
-
 .section-content {
-    display: flex;
-    flex-direction: column;
     height: 1033px;
-    position: relative;
-    width: 100%;
-    text-align: center;
     padding-top: 175px;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 .headline-wrapper {
@@ -522,10 +503,6 @@ a.footer-nav-child:hover {
         flex-shrink:0;
         min-height: 350px;
         text-align: center;
-    }
-    
-    .sticky-content {
-        position: sticky;
     }
 
     .sticky-padding {

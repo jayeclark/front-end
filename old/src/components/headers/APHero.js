@@ -6,12 +6,12 @@ export function Hero({id, title, logoImgs, lockupImgs, svgArray, classArray, cta
   const {heroSm, heroSm2x, heroM, heroM2x, heroL, heroL2x} = lockupImgs;
   
      return (
-        <section className="hero-section">
-          <div className="sticky-wrapper">
-            <div className="sticky-content">
-              <div className={classArray ? "section-content " + classArray.section : "section-content"}>
+        <section className="d-block">
+          <div className="d-block">
+            <div className="d-block position-sticky">
+              <div className={classArray ? "d-flex flex-column position-relative text-center w-100 overflow-hidden section-content " + classArray.section : "d-flex flex-column position-relative text-center w-100 overflow-hidden section-content"}>
                 <div className="copy-container">
-                  <div className="headline-wrapper">
+                  <div className="m-0 p-0 headline-wrapper">
                     <div className="headline-logo">
                       {svgArray.map((svg,i)=>
                         <SVG key={i} classArray={classArray} d={svg.d} name={svg.name} fill={svg.fill} fillRule={svg.fillRule}></SVG>
